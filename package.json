@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-renacer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joaquinlp11/proyecto-renacer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joaquinlp11/proyecto-renacer/issues"
+  },
+  "homepage": "https://github.com/Joaquinlp11/proyecto-renacer#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
