@@ -1,5 +1,3 @@
-# proyecto-renacer
-
 referentes:
 drops
 mercado libre
