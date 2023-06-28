@@ -18,11 +18,28 @@
     <header class="header">
         <nav class="nav-mobile">
             <div class="mobile-menu-bar">
-                <div class="mobile-menu-toggle">
-                    <i class="fa-solid fa-bars"></i>
-                    <span>Menú</span>
+                <div class="container-drop">
+
+                    <button class="btn-menu">
+                        <div class="mobile-menu-toggle">
+                        
+                            <i class="fa-solid fa-bars"></i>
+                            <span>Menú</span>
+                        </div>
+                    </button>
+                        <div class="contenido-desplegable">
+                            
+                            <a href="#">Inicio</a>
+                            <a href="#">Productos</a>
+                            <a href="#">Mi Cuenta</a>
+                            <a href="#">Registro</a>
+                            <a href="#">Segui tu pedido</a>
+                            <a href="#">Informa tu pago</a>
+                            
+                            
+                        </div>
                 </div>
-                <!-- <div class="mobile-logo-wrapper"><a href="#"> -->
+                    <!-- <div class="mobile-logo-wrapper"><a href="#"> -->
                 <img class="mobile-logo-wrapper" src="/img/RENACER_LOG__2.png" alt="">
                 <!-- </div> -->
                 </a>
@@ -47,22 +64,26 @@
                     <li class=""><a href="#">Mi cuenta</a></li>
                 </ul>
                 <div class="menu-vertical-container">
-
-                    <li class="menu-vertical">
+                     <button class="btn-menu-pc">
+                    <div class="menu-vertical">
                         <span>Menu</span>
                         <ion-icon class="burger-menu" name="menu-outline"></ion-icon>
-                    </li>
-                </div>
-                <div class="scroll-container">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Mi Cuenta</a></li>
-                        <li><a href="#">Registro</a></li>
-                    </ul>
-                </div>
+                        <div>
+
+                        </button>
+                            <div class="scroll-container">
+                                <ul>
+                                    <li><a class="li-text-pc" href="#">Inicio</a></li>
+                                    <li><a class="li-text-pc" href="#">Productos</a></li>
+                                    <li><a class="li-text-pc" href="#">Mi Cuenta</a></li>
+                                    <li><a class="li-text-pc" href="#">Registro</a></li>
+                                </ul>
+                            </div>
+                        
+                    </div>
             </div>
-        </nav>
+        </div>
+    </nav>
        
     
         
@@ -74,15 +95,15 @@
             <h2 id="title-login">Iniciar sesión</h2>
 
             <form action="/" method="get" class="form-login">
-                <p class="login-username">
+                <div class="login-username">
                     <input type="text" name="username" id="username" autocomplete="username" value
-                        placeholder="Usuario o Correo electronico *" required />
-
-                </p>
-                <p class="login-contrasena">
-                    <input type="password" name="password" id="password" value placeholder="Contraseña *" required />
-
-                </p>
+                        placeholder="" required />
+                    <label for="username">Usuario o Correo electronico *</label>
+                </div>
+                <div class="login-contrasena">
+                    <input type="password" name="password" id="password" value placeholder="" required />
+                    <label for="password">Contraseña *</label>
+                </div>
                 <div class="container-remember">
                     <div id="remember-checkbox">
                         <input type="checkbox" id="record" name="recordarme" />
