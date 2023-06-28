@@ -10,7 +10,7 @@ a {
 body {
     background-color: #CEC2B7;
     font-family: roboto, 'Times New Roman', Times, serif;
- position: relative;
+    position: relative;
 
 }
 
@@ -29,44 +29,46 @@ body {
     background-color: transparent;
     height: 60px;
     display: flex;
-    
+
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
-.container-drop{
+
+.container-drop {
     position: relative;
 }
 
-.btn-menu{
+.btn-menu {
     background: transparent;
     border: none;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.mobile-menu-bar .btn-menu{
+.mobile-menu-bar .btn-menu {
     background-color: transparent;
-   
+
     font-size: 16px;
     border: none;
     border-radius: 8px;
     transition: 0.3s;
-    
+
 }
-.mobile-menu-bar .contenido-desplegable{
+
+.mobile-menu-bar .contenido-desplegable {
     position: absolute;
     background-color: transparent;
     min-width: max-content;
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.493); */
     z-index: 188;
     opacity: 0;
     border-radius: 8px;
     left: -20px;
-    top:45px;
+    top: 45px;
     transition: 0.3s;
-    
+
 }
-.mobile-menu-bar .contenido-desplegable a{
+
+.mobile-menu-bar .contenido-desplegable a {
     display: block;
     color: #CEC2B7;
     padding: 8px 10px;
@@ -77,15 +79,17 @@ body {
     margin-bottom: 3px;
     transition: 0.3s;
 }
-.mobile-menu-bar .contenido-desplegable a:hover{
+
+.mobile-menu-bar .contenido-desplegable a:hover {
     background: #e2cbbf;
     color: #67361C;
 }
 
-.mobile-menu-bar:hover .btn-menu{
-    background:    #CEC2B7;
+.mobile-menu-bar:hover .btn-menu {
+    background: #CEC2B7;
 }
-.btn-menu:focus ~ .contenido-desplegable{
+
+.btn-menu:focus~.contenido-desplegable {
     opacity: 1;
     z-index: 1;
     display: block;
@@ -186,44 +190,52 @@ img.mobile-logo-wrapper {
 }
 
 
-.login-username, .login-contrasena {
+.login-username,
+.login-contrasena {
     text-align: center;
     position: relative;
     margin-bottom: 10px;
-  
+
 }
-.login-username input, .login-contrasena input{
+
+.login-username input,
+.login-contrasena input {
     border: solid 1.5px #67361C;
     border-radius: 1rem;
     background: none;
     font-size: 1rem;
     color: #67361C;
-    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 90%;
     padding: 10px;
 }
-.login-username label, .login-contrasena label{
+
+.login-username label,
+.login-contrasena label {
     opacity: 0.5;
     position: absolute;
     left: 17px;
     color: #67361C;
     pointer-events: none;
     font-size: 14px;
-    transition: 150ms cubic-bezier(0.4,0,0.2,1);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 12px;
 }
-.login-username input:focus, .login-contrasena input:focus{
+
+.login-username input:focus,
+.login-contrasena input:focus {
     outline: none;
     border: 1.5px solid #67361C;
-    
+
 }
-.login-username input:focus ~ label,
-.login-username input:valid ~ label,
-.login-contrasena input:focus ~ label,
-.login-contrasena input:valid ~ label{
-     
+
+.login-username input:focus~label,
+.login-username input:valid~label,
+.login-contrasena input:focus~label,
+.login-contrasena input:valid~label {
+
     transform: translatex(2%) translateY(-100%) scale(0.8);
-    background-color:#CEC2B7;
+    background-color: #CEC2B7;
     padding: 0 0.2em;
     opacity: 1;
 }
@@ -303,8 +315,6 @@ img.mobile-logo-wrapper {
 }
 
 .footer-social {
-    /*  display: flex;
-    justify-content: space-evenly; */
     font-size: 24px;
     margin: auto;
     cursor: pointer;
@@ -324,37 +334,41 @@ img.mobile-logo-wrapper {
     width: 100%;
     text-align: center;
 }
-.logo-pc{
+
+.logo-pc {
     display: none;
 
 }
 
 
 @media (min-width: 480px) {
-      .form-login{
+    .form-login {
         min-width: 350px;
-    } 
-    .login-username label, .login-contrasena label{
-        
+    }
+
+    .login-username label,
+    .login-contrasena label {
+
         left: 25px;
-       
+
     }
 }
 
 @media (min-width:1200px) {
-    .principal-main{
+    .principal-main {
         margin: 0 auto;
         position: relative;
         top: -80px;
-        
+
     }
+
     .nav-mobile {
         display: none;
     }
 
     .nav-pc {
         display: block;
-        
+
     }
 
     .rectangle-1 {
@@ -370,105 +384,112 @@ img.mobile-logo-wrapper {
         transform: translateY(100%) rotate(-90deg);
         justify-content: space-between;
     }
-    li{
+
+    li {
         list-style: none;
     }
-    .vertical{
+
+    .vertical {
         display: initial;
         font-size: 16px;
         margin: 0;
         max-width: 80%;
     }
-    .vertical li{
+
+    .vertical li {
         display: inline-block;
         padding-right: 20px;
     }
-    .burger-menu{
+
+    .burger-menu {
         font-size: 25px;
         color: #67361C;
         transform: rotate(-90deg);
-      
+
     }
-    .menu-vertical-container{
+
+    .menu-vertical-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
-    .menu-vertical span{
+
+    .menu-vertical span {
         padding-right: 10px;
         font-size: 16px;
         color: #67361C;
-        
+
     }
-    .logo-pc{
+
+    .logo-pc {
         display: flex;
         margin: 0 auto;
         width: 30%;
         height: 350px;
-       
-    }
-    .logo-pc img{
-       
-        width: 100%;
-    position: relative;
-    top: -50px;
+
     }
 
-    .login-username label, .login-contrasena label{
-        
-        left: 30px;
-       
+    .logo-pc img {
+
+        width: 100%;
+        position: relative;
+        top: -50px;
     }
+
+    .login-username label,
+    .login-contrasena label {
+
+        left: 30px;
+
+    }
+
     /* SCROLL */
-    .btn-menu-pc{
+    .btn-menu-pc {
         background-color: transparent;
         border: none;
     }
-    .scroll-container{
+
+    .scroll-container {
         opacity: 0;
         display: inline-block;
-        
+
     }
-   
-    .scroll-container ul{
+
+    .scroll-container ul {
         padding: 0;
     }
-    .scroll-container li{
+
+    .scroll-container li {
         margin: 30px auto;
         font-size: 20px;
         color: #CEC2B7;
         list-style: none;
         width: max-content;
-        
+
     }
-    .li-text-pc{
+
+    .li-text-pc {
         color: #CEC2B7;
         position: relative;
         z-index: 77;
     }
-    .li-text-pc:hover{
+
+    .li-text-pc:hover {
         background-color: #CEC2B7;
         color: #67361C;
         border-radius: 5px;
     }
-    .btn-menu-pc:focus ~ .scroll-container{
-         display: inline-block;
-       /* background-color: #67361C;
-        border: #917357 solid 5px;
-        position: fixed;
-        height: 90vh;
-        top: -20px;
-        right: 130px;
-        width: 60%;
-        transition: all 3s cubic-bezier(0.4,0,0.2,1);
-        ; */
+
+    .btn-menu-pc:focus~.scroll-container {
+        display: inline-block;
         opacity: 1;
         transform: rotate(90deg) translate(130%);
-        transition: all 3s cubic-bezier(0.4,0,0.2,1);
+        transition: all 3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .scroll-container{
+
+    .scroll-container {
         position: absolute;
         transform: rotate(90deg);
         border: #917357 solid 5px;
@@ -477,14 +498,15 @@ img.mobile-logo-wrapper {
         padding: 15px;
         background-color: #67361C;
         color: #816244;
-        transition: all 3s cubic-bezier(0.4,0,0.2,1);
+        transition: all 3s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .scroll-container:hover{
+
+    .scroll-container:hover {
         border: #b97c42 solid 5px;
-        
+
     }
-    .form-login{
+
+    .form-login {
         min-width: 350px;
-        /* max-width: 50%; */
-    } 
+    }
 }
