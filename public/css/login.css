@@ -449,6 +449,7 @@ img.mobile-logo-wrapper {
     .btn-menu-pc {
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
 
     .scroll-container {
@@ -486,7 +487,7 @@ img.mobile-logo-wrapper {
         display: inline-block;
         opacity: 1;
         transform: rotate(90deg) translate(130%);
-        transition: all 3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .scroll-container {
@@ -498,7 +499,7 @@ img.mobile-logo-wrapper {
         padding: 15px;
         background-color: #67361C;
         color: #816244;
-        transition: all 3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .scroll-container:hover {

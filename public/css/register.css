@@ -449,6 +449,7 @@ img.mobile-logo-wrapper-register {
     .btn-menu-pc-register {
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
 
     .scroll-container-register {
@@ -485,6 +486,7 @@ img.mobile-logo-wrapper-register {
     .btn-menu-pc-register:focus~.scroll-container-register {
         display: inline-block;
         opacity: 1;
+        
         transform: rotate(90deg) translate(130%);
         transition: all 3s cubic-bezier(0.4, 0, 0.2, 1);
     }
