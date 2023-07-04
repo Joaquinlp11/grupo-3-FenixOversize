@@ -118,12 +118,10 @@ img.mobile-logo-wrapper {
 }
 
 
-
 .mobile-menu-toggle {
     color: #67361C;
     font-size: 15px;
 }
-
 
 .container {
     max-width: 1130px;
@@ -182,13 +180,11 @@ img.mobile-logo-wrapper {
 }
 
 
-
 .form-login {
     min-width: 100%;
     display: flex;
     flex-direction: column;
 }
-
 
 .login-username,
 .login-contrasena {
@@ -242,7 +238,6 @@ img.mobile-logo-wrapper {
 
 
 
-
 .button-sesion {
     background-color: #67361C;
     width: 90%;
@@ -275,14 +270,12 @@ img.mobile-logo-wrapper {
     margin: 0;
 }
 
-
 .container-remember {
     display: flex;
     justify-content: space-between;
     font-size: smaller;
     flex-wrap: wrap;
 }
-
 
 .button-register {
     display: block;
@@ -297,7 +290,6 @@ img.mobile-logo-wrapper {
     padding: 0;
     height: 45px;
 }
-
 
 
 
@@ -339,7 +331,6 @@ img.mobile-logo-wrapper {
     display: none;
 
 }
-
 
 @media (min-width: 480px) {
     .form-login {
@@ -416,8 +407,19 @@ img.mobile-logo-wrapper {
         text-align: center;
     }
 
+    .menu-vertical{
+        display: flex;
+        align-items: center;
+      
+        transition: all 0.3ms;
+    }
+    .menu-vertical:hover{
+      
+        border: #b97c42 2px solid;
+       
+    }
     .menu-vertical span {
-        padding-right: 10px;
+        /* padding-right: 10px; */
         font-size: 16px;
         color: #67361C;
 

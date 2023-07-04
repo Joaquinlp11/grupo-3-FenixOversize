@@ -118,12 +118,10 @@ img.mobile-logo-wrapper-register {
 }
 
 
-
 .mobile-menu-toggle-register {
     color: #67361C;
     font-size: 15px;
 }
-
 
 .container-register {
     max-width: 1130px;
@@ -182,13 +180,11 @@ img.mobile-logo-wrapper-register {
 }
 
 
-
 .form-register {
     min-width: 100%;
     display: flex;
     flex-direction: column;
 }
-
 
 .register-username,
 .register-contrasena {
@@ -242,7 +238,6 @@ img.mobile-logo-wrapper-register {
 
 
 
-
 .button-register {
     background-color: #67361C;
     width: 90%;
@@ -275,14 +270,12 @@ img.mobile-logo-wrapper-register {
     margin: 0;
 }
 
-
 .container-remember-register {
     display: flex;
     justify-content: space-between;
     font-size: smaller;
     flex-wrap: wrap;
 }
-
 
 .button-login {
     display: block;
@@ -297,7 +290,6 @@ img.mobile-logo-wrapper-register {
     padding: 0;
     height: 45px;
 }
-
 
 
 
@@ -339,7 +331,6 @@ img.mobile-logo-wrapper-register {
     display: none;
 
 }
-
 
 @media (min-width: 480px) {
     .form-register {
@@ -415,9 +406,14 @@ img.mobile-logo-wrapper-register {
         justify-content: center;
         text-align: center;
     }
+    .menu-vertical-register{
+        display: flex;
+        align-items: center;
+    }
+   
 
     .menu-vertical-register span {
-        padding-right: 10px;
+        /* padding-right: 10px; */
         font-size: 16px;
         color: #67361C;
 
@@ -486,7 +482,7 @@ img.mobile-logo-wrapper-register {
     .btn-menu-pc-register:focus~.scroll-container-register {
         display: inline-block;
         opacity: 1;
-        
+
         transform: rotate(90deg) translate(130%);
         transition: all 3s cubic-bezier(0.4, 0, 0.2, 1);
     }
