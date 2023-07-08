@@ -11,7 +11,7 @@ body {
     background-color: #CEC2B7;
     font-family: roboto, 'Times New Roman', Times, serif;
     position: relative;
-
+    z-index: -3;
 }
 
 .header {
@@ -154,6 +154,8 @@ img.mobile-logo-wrapper {
 .container-main {
     max-width: 80%;
     margin: auto;
+    position: relative;
+    z-index: -2;
 }
 
 .principal-main {
@@ -350,7 +352,7 @@ img.mobile-logo-wrapper {
         margin: 0 auto;
         position: relative;
         top: -80px;
-
+        z-index: -1;
     }
 
     .nav-mobile {
@@ -419,7 +421,6 @@ img.mobile-logo-wrapper {
        
     }
     .menu-vertical span {
-        /* padding-right: 10px; */
         font-size: 16px;
         color: #67361C;
 
@@ -476,7 +477,7 @@ img.mobile-logo-wrapper {
     .li-text-pc {
         color: #CEC2B7;
         position: relative;
-        z-index: 77;
+        
     }
 
     .li-text-pc:hover {
@@ -502,6 +503,7 @@ img.mobile-logo-wrapper {
         background-color: #67361C;
         color: #816244;
         transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 20;
     }
 
     .scroll-container:hover {
