@@ -4,6 +4,7 @@ const router = express.Router();
 
 //@get /l
 router.get ( '/detail' , productsControllers.getDetail );
+router.get ( '/')
 
 
 
