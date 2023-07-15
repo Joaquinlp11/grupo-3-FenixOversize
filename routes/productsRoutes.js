@@ -2,8 +2,9 @@ const express = require ('express')
 const productsControllers = require('../controllers/productsControllers')
 const router = express.Router();
 
-//@get /l
+//@get /products
 router.get ( '/detail' , productsControllers.getDetail );
+router.get ( '/car' , productsControllers.getCar);
 
 
 

@@ -4,6 +4,9 @@ const productsControllers= {
 
     getDetail: (req, res)=>{
         res.render('detail')
+    },
+    getCar: (req, res)=>{
+        res.render('carrito')
     }
 }
 
