@@ -1,6 +1,6 @@
 .main-car {
     display: block;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .container-info {
@@ -10,19 +10,23 @@
     padding: 0 15px;
     display: grid;
     position: relative;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(217px, 1fr));
+    border-bottom: #6c3d23 double;
+    border-top: #6c3d23 double;
 }
 
 .container-four {
     width: 90%;
     text-align: center;
-    margin-top: 30px;
+    
     box-shadow: inset #a7754c6b 0px 1px 8px 2px;
-    padding: 24px;
+    
     margin: 10px auto;
+    height: min-content;
 }
 .container-four img {
     width: 70%;
+    margin-top: auto;
 }
 
 .shop-table {
@@ -34,6 +38,7 @@
 .text-detail{
     display: flex;
     justify-content: space-between;
+   
 }
 .info-car {
     font-weight: 600;
@@ -45,4 +50,25 @@
     color: #a77347;
     text-align: right;
     padding-left: 10px;
+}
+
+
+@media (min-width: 480px) {
+
+    
+    .container-four {
+       margin: auto;
+       width: 200px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-four {
+        margin: auto;
+        width: max(50%, 50%);
+    }
+    .main-car{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 100px;
+    }
 }
