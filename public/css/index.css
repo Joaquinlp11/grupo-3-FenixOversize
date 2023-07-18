@@ -1,6 +1,194 @@
-.header {
-    width: 300px;
-    height: 200px;
-    background-color: teal;
+* {
+    box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #67361C;
+}
+
+body {
+    background-color: #CEC2B7;
+    font-family: roboto, 'Times New Roman', Times, serif;
+    position: relative;
+
+}
+
+.header {
+    position: relative;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.nav-mobile {
+    display: block;
+}
+
+.mobile-menu-bar {
+    width: 100%;
+    background-color: transparent;
+    height: 60px;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-drop {
+    position: relative;
+}
+
+.btn-menu {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.mobile-menu-bar .btn-menu {
+    background-color: transparent;
+
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+
+}
+
+.mobile-menu-bar .contenido-desplegable {
+    position: absolute;
+    background-color: transparent;
+    min-width: max-content;
+    z-index: 188;
+    opacity: 0;
+    border-radius: 8px;
+    left: -20px;
+    top: 45px;
+    transition: 0.3s;
+
+}
+
+.mobile-menu-bar .contenido-desplegable a {
+    display: block;
+    color: #CEC2B7;
+    padding: 8px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    border: #67361C solid 1px;
+    background-color: #67361C;
+    margin-bottom: 3px;
+    transition: 0.3s;
+}
+
+.mobile-menu-bar .contenido-desplegable a:hover {
+    background: #e2cbbf;
+    color: #67361C;
+}
+
+.mobile-menu-bar:hover .btn-menu {
+    background: #CEC2B7;
+}
+
+.btn-menu:focus~.contenido-desplegable {
+    opacity: 1;
+    z-index: 1;
+    display: block;
+}
+
+img.mobile-logo-wrapper {
+
+    max-width: 100%;
+    height: 170px;
+    margin-top: 50px;
+}
+
+.mobile-icons-box {
+    font-size: 1rem;
+    width: 50px;
+    text-align: right;
+}
+
+.mobile-search-toggle {
+    vertical-align: middle;
+    color: #67361C;
+}
+
+.nav-pc {
+    display: none;
+}
+
+
+.mobile-menu-toggle {
+    color: #67361C;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1130px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.container-2 {
+    padding-bottom: 87px;
+}
+
+.subcontainer {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+#customer-login {
+    max-width: 408px;
+    margin: 0 auto;
+}
+
+#custome-login .u-column1.active {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+
+
+
+
+/* FOOTER */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    width: 100%;
+    margin-top: 15px;
+
+}
+
+.footer-social {
+    font-size: 24px;
+    margin: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#facebook:hover,
+#instagram:hover,
+#mail:hover,
+#whatsapp:hover {
+    color: #db721b;
+}
+
+.footer-copyright,
+.footer-social {
+    color: #67361C;
+    width: 100%;
+    text-align: center;
+}
+
+.logo-pc {
+    display: none;
+
+}
