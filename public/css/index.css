@@ -150,9 +150,77 @@ img.mobile-logo-wrapper {
 
 }
 
+/* MAIN */
 
+h2 {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #67361C;
+}
 
+/*banner*/
 
+.banner{
+    max-width: 100%;
+    height: 500px;
+    margin-top: 70px;
+    margin-left: 90px;
+}
+
+/*categorias*/
+
+.section-categorias{
+    width: 100%;
+    padding: 30px;
+}
+
+.categorias{
+    display: inline-block;
+    width: 20%;
+    margin: 20px;
+}
+
+.img-categoria{
+    padding-left: 10%;
+    max-width: 100%;
+    height: 200px;
+}
+
+.text{
+    text-align: center;
+}
+
+/*outfits*/
+
+.section-outfits {
+    width: 100%;
+    padding: 30px;
+}
+
+.card {
+    display: inline-block;
+    width: 20%;
+    margin: 20px;
+}
+
+.img-card-outfit {
+    padding-left: 5%;
+    max-width: 100%;
+    height: 300px;
+}
+
+.description {
+}
+
+.info-card {
+    text-align: center;
+}
+
+.price-card {
+    text-align: center;
+
+}
 
 /* FOOTER */
 .footer-container {
