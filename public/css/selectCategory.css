@@ -1,0 +1,27 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+button {
+    font-size: medium;
+    color: rgb(255, 255, 255);
+    width: 600px;
+    height: 50px;
+    background-color: #67361C;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+.botones {
+    color: #6a209b;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear producto</title>
+</head>
+<body>
+    <div>
+        <form action="/nuevoProducto" method="post">
+            <label for="nombre">Nombre del producto</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="precio">Precio del producto</label>
+            <input type="number" name="precio" id="precio">
+            <label for="imagen">Seleccionar imagenes del producto</label>
+            <input type="file" name="imagen" accept=".jpg" multiple>
+            <label for="categoria">Elegir categoria</label>
+            <select name="categoria" id="categoria">
+                <option value="remera">Remera</option>
+                <option value="campera">Campera</option>
+                <option value="buzo">Buzo</option>
+                <option value="hoddie">hoddie</option>
+                <option value="canguro">canguro</option>
+                <option value="remera manga larga">Remera manga larga</option>
+                <option value="pantalon cargo"> Pantalon cargo</option>
+                <option value="pantalon">pantalon</option>
+                <option value="calzado">calzado</option>
+            <label for="color">Colores</label>
+            <select name="color" id="color">
+                <option value=""></option>
+            </select>
+            </select>
+        </form>        
+    </div>
+
+</body>
+</html>
