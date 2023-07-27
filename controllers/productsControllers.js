@@ -10,12 +10,12 @@ const productsControllers= {
         res.render('selectCategory')
     },
 
-    getNewProductC: (req, res) => {
-        res.render('createProductC')
+    getAddSneakers: (req, res) => {
+        res.render('addSneakers')
     },
 
-    getNewProductV: (req, res) => {
-        res.render('createProductV')
+    getAddClothes: (req, res) => {
+        res.render('addClothes')
     }
 
 }

@@ -1,15 +1,30 @@
-.titulo {
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.container-titulo {
     display: flex;
     justify-content: center;
-    padding-bottom: 30px;
+}
+
+.titulo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    font-size: small;
 }
 
 .botones {
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
+    padding-bottom: 60px;
 }
-
+/*
 button {
     font-size: medium;
     color: rgb(255, 255, 255);
@@ -19,9 +34,4 @@ button {
     padding: 0;
     margin: 0;
     border: 0;
-}
-
-
-.botones {
-    color: #6a209b;
-}
+}*/

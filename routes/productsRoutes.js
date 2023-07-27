@@ -5,10 +5,10 @@ const router = express.Router();
 //@get /l
 router.get ('/detail', productsControllers.getDetail);
 
-router.get ('/newproductc', productsControllers.getNewProductC);
+router.get ('/addsneakers', productsControllers.getAddSneakers);
 
 router.get ('/selectcategory', productsControllers.getSelectCategory);
 
-router.get ('/newproductv', productsControllers.getNewProductV);
+router.get ('/addclothes', productsControllers.getAddClothes);
 
 module.exports = router;
