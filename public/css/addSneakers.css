@@ -1,29 +1,37 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 main {
+    padding-top: 50px;
     padding-bottom: 60px;
-}
-
-#container-form {
-    display: flex;
-    justify-content: center;
-    font-size: 22px;
 }
 
 #titulo {
     display: flex;
-    justify-content: center;
-    padding-bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+#container-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 30px;
 }
 
 #nombre {
-    padding: 5px 30px;
+    padding: 5px 10px;
 }
 
 #precio {
-    padding: 5px 30px;
+    padding: 5px 10px;
 }
 
 #talles {
@@ -41,16 +49,23 @@ main {
 }
 
 #button-publicar {
-    font-size: medium;
+    font-size: 17px;
     color: rgb(255, 255, 255);
-    width: 600px;
-    height: 50px;
+    width: 200px;
+    height: 35px;
     background-color: #67361C;
     padding: 0;
     margin: 0;
     border: 0;
 }
 
+@media (min-width: 1200px) {
+    #button-publicar {
+        font-size: medium;
+        width: 600px;
+        height: 50px;
+    }
+}
 
 
 
