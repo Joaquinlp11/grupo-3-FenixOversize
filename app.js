@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const methodOverride = require('method-override');
 const app = express();
 
 const publicPath = path.join (__dirname, './public');
@@ -26,12 +27,13 @@ app.use ( express.json());
 
 
 /* Routers */
-app.use(mainRoutes)
+app.use(mainRoutes);
 app.use ( usersRoutes);
 app.use(productsRoutes);
 
 
-app.use(express.static("public"))
+app.use(express.static("public"));
+app.use(methodOverride('_method'));
 
 app.listen(3000, () => {
     console.log('servidor funcionando http://localhost:3000/');

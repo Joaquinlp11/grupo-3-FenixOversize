@@ -11,4 +11,6 @@ router.get ('/selectcategory', productsControllers.getSelectCategory);
 
 router.get ('/addclothes', productsControllers.getAddClothes);
 
+router.get ('/edit', productsControllers.getEdit);
+
 module.exports = router;
