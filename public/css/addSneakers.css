@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+#container-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 22px;
+    padding-top: 30px;
+    min-width: 100%;
+}
+
+#title-add {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    color: #67361C;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.product-name .product-price {
+    text-align: center;
+}
+
+.product-name,
+.product-price {
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.product-name input,
+.product-price input {
+    border: solid 1.5px #67361C;
+    border-radius: 1rem;
+    background: none;
+    font-size: 1rem;
+    color: #67361C;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 30%;
+    padding: 10px;
+}
+
+.product-name label,
+.product-price label {
+    opacity: 0.5;
+    position: absolute;
+    left: 550px;
+    color: #67361C;
+    pointer-events: none;
+    font-size: 17px;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 12px;
+}
+
+.product-name input:focus,
+.product-price input:focus {
+    outline: none;
+    border: 1.5px solid #67361C;
+
+}
+
+.product-name input:focus~label,
+.product-name input:valid~label,
+.product-price input:focus~label,
+.product-price input:valid~label {
+
+    transform: translatex(2%) translateY(-100%) scale(0.8);
+    background-color: #CEC2B7;
+    padding: 0 0.2em;
+    opacity: 1;
+}
+
+
+/*
+#nombre {
+    padding: 5px 10px;
+}
+
+#precio {
+    padding: 5px 10px;
+}
+
+#talles {
+    padding: 5px 25px;
+}
+
+#color {
+    padding: 5px 25px;
+}
+*/
+
+.container-publicar-producto {
+    justify-content: center;
+    display: flex;
+    padding-bottom: 60px;
+}
+
+#button-publicar {
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    width: 200px;
+    height: 35px;
+    background-color: #67361C;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+@media (min-width: 1200px) {
+    #button-publicar {
+        font-size: medium;
+        width: 600px;
+        height: 50px;
+    }
+}
+
+
+

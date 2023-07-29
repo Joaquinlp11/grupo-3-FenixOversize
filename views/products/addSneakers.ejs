@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/addSneakers.css">
+<title>Nuevas Zapatillas</title>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div id="title-add">
+            <h1>Complete el formulario para publicar el nuevo par de zapatillas</h1>
+        </div>
+        <div id="container-form">
+            <form action="/nuevaZapatilla" method="post">
+                <div class="product-name">
+                    <input type="text" name="name-producto" id="nombre">
+                    <label for="name-producto">Nombre del producto</label>
+                </div>
+                <div class="product-price">
+                    <input type="number" name="precio" id="precio">
+                    <label for="precio">Precio del producto</label>
+                </div>
+                <div class="product-sizes">
+                    <label for="talles">Talles</label>
+                    <select name="talles" id="talles">
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                    </select>
+                </div>
+                <div class="container-color-producto">
+                    <label for="color">Colores</label>
+                    <select name="color" id="color">
+                        <option value="blanco">Blanco</option>
+                        <option value="negro">Negro</option>
+                        <option value="marron">Marron</option>
+                        <option value="violeta">Violeta</option>
+                        <option value="rosa">Rosa</option>
+                        <option value="crema">Crema</option>
+                    </select>
+                </div>
+                <div class="container-imagen-producto">
+                    <label for="imagen">Seleccione imagenes del producto</label>
+                    <input type="file" name="imagen" accept=".jpg" multiple>
+                </div>
+                <div class="container-publicar-producto">
+                    <button id="button-publicar">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>
