@@ -1,25 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ave Fenix</title>
-</head>
+
+<%- include('../partials/head') %>
+
+
 <body>
-    <header>
-        <div class="header">
-            <h1>header</h1>
+    <%- include('../partials/header') %>
+<div class="banner-main">
+
+    <div class="container-banner">
+        <!--  <a href=""><img class="banner" src="/img/banner.jpg" alt=""></a> -->
+        
+    </div>
+</div>
+    <main class="main">
+   
+    <!-- DROPS 
+    <div>
+        <img src="" alt="">
+    </div>-->
+
+    <!-- CATEGORIAS -->
+    <div class="container-categorias">
+        <h2>CATEGORIAS</h2>
+
+        <div class="section-categorias">
+            <div class="categorias">
+                <a href=""> <img class="img-categoria" src="/img/11.png" alt=""></a>
+                <p class="text">REMERAS</p>
+            </div>
+
+            <div class="categorias">
+                <a href=""> <img class="img-categoria" src="/img/22.png" alt=""></a>
+                <p class="text">HOODIES</p>
+            </div>
+
+            <div class="categorias">
+                <a href=""> <img class="img-categoria" src="/img/33.png" alt=""></a>
+                <p class="text">PANTALONES</p>
+            </div>
+
+            <div class="categorias">
+                <a href=""> <img class="img-categoria" src="/img/44.png" alt=""></a>
+                <p class="text">BUZOS</p>
+            </div>
         </div>
-    </header>
-    <main>
-        <div class="body">
-            <h1>body</h1>
+
+    </div>
+
+    <!-- OUTFITS -->
+    <div class="container-outfits">
+        <h2>OUTFITS</h2>
+
+        <div class="section-outfits">
+            <div>
+                <div class="card">
+                    <a href=""><img class="img-card-outfit" src="/img/1.jpg" alt=""></a>
+                    <div class="description">
+                        <p class="info-card">Hoodie Oversize Frisado + Regular Pants</p>
+                        <p class="price-card">$10.600</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                <div class="card">
+                    <a href=""><img class="img-card-outfit" src="/img/2.jpg" alt=""></a>
+                    <div class="description">
+                        <p class="info-card">Hoodie Wide Cut Frisado + Remera Ribb Midi + Jogger Regular Frisado</p>
+                        <p class="price-card">$10.600</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                <div class="card">
+                    <a href=""><img class="img-card-outfit" src="/img/3.jpg" alt=""></a>
+                    <div class="description">
+                        <p class="info-card">Hoodie Wide Cut Frisado + Jogger Regular Frisado</p>
+                        <p class="price-card">$10.600</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                <div class="card">
+                    <a href=""><img class="img-card-outfit" src="/img/4.jpg" alt=""></a>
+                    <div class="description">
+                        <p class="info-card">Canguro Wide Cut Frisado + Jogger Regular Frisado</p>
+                        <p class="price-card">$10.600</p>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
-    <footer>
-        <div class="footer">
-            <h1>footer</h1>
-        </div>
-    </footer>
+    </div>
+</main>
+    <!-- FOOTER -->
+   <%- include("../partials/footer") %>
+
 </body>
+
 </html>

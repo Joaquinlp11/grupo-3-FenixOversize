@@ -299,6 +299,7 @@ img.mobile-logo-wrapper {
 .footer-container {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .footer-copyright {

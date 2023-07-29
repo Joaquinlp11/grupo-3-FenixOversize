@@ -1,6 +1,164 @@
-.header {
-    width: 300px;
-    height: 200px;
-    background-color: teal;
+/* MAIN */
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #67361C;
 }
 
+.main {
+    margin-bottom: 100px;
+}
+
+/*banner*/
+.container-banner {
+    margin: 70px auto;
+    width: 100%;
+    padding: 13px;
+}
+
+.banner {
+    width: 100%;
+
+
+}
+
+.container-banner {
+    background-image: url("/img/homeFenix3.jpg");
+    z-index: -5;
+    margin: 0px auto;
+    width: 90%;
+    /*  padding: 20px; */
+    /* position: relative;
+      top: -100px; */
+    height: 80vh;
+    background-size: cover;
+    background-repeat: round;
+    /* background-position: center; */
+    animation: bannerAnimation 8s infinite forwards;
+    position: relative;
+    margin-top: 50px;
+}
+
+.banner-main {
+    width: 100%;
+    margin: auto;
+}
+
+@keyframes bannerAnimation {
+    0% {
+        background-image: url("/img/homeFenix3.jpg");
+    }
+
+    25% {
+        background-image: url("/img/homeFenix7.jpg");
+    }
+
+    50% {
+        background-image: url("/img/homeFenix6.jpg");
+    }
+
+    75% {
+        background-image: url("/img/homeFenix4.jpg");
+    }
+
+    100% {
+        background-image: url("/img/homeFenix5.png");
+    }
+}
+
+/*categorias*/
+
+.section-categorias,
+.section-outfits {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.categorias {
+    display: grid;
+    width: 70%;
+    margin: 10px auto;
+    border: solid darkgoldenrod;
+    text-align: center;
+    color: #67361C;
+    font-weight: 900;
+}
+
+.img-categoria {
+
+    width: 100%;
+
+}
+
+
+
+
+.card {
+    display: grid;
+    width: 70%;
+    margin: 5px auto;
+    /* border: solid darkgoldenrod; */
+
+}
+
+.img-card-outfit {
+
+    padding: 10%;
+    max-width: 100%;
+    background-color: #67361C;
+}
+
+.description {
+    display: none;
+
+    font-size: 14px;
+    text-align: center;
+    color: #67361C;
+    transform: translateY(-5%);
+    transition: all 5s;
+}
+
+.card:hover .description {
+    display: block;
+    background-color: #ab95604f;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+@media (min-width: 480px) {
+
+    .section-categorias,
+    .section-outfits {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .banner-main {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container-banner {
+        height: 100vh;
+        top: -140px;
+    }
+
+    .container-categorias,
+    .container-outfits {
+        margin: auto;
+        width: 90%;
+    }
+
+    .section-categorias,
+    .section-outfits {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
