@@ -8,6 +8,9 @@ router.get ('/detail', productsControllers.getDetail);
 router.get ('/addsneakers', productsControllers.getAddSneakers);
 
 router.get ('/selectcategory', productsControllers.getSelectCategory);
+//@get /products
+router.get ( '/detail' , productsControllers.getDetail );
+router.get ( '/car' , productsControllers.getCar);
 
 router.get ('/addclothes', productsControllers.getAddClothes);
 

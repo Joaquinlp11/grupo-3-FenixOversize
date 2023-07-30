@@ -20,6 +20,9 @@ const productsControllers= {
 
     getEdit: (req, res) => {
         res.render('editProduct');
+    },
+    getCar: (req, res)=>{
+        res.render('carrito')
     }
 
 }

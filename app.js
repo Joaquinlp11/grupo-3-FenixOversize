@@ -29,7 +29,7 @@ app.use ( express.json());
 /* Routers */
 app.use(mainRoutes);
 app.use ( usersRoutes);
-app.use(productsRoutes);
+app.use('/products',productsRoutes);
 
 
 app.use(express.static("public"));
