@@ -143,12 +143,12 @@
 
     .imagen-producto {
         width: 500px;
-        height: 500px;
+       /*  height: 500px; */
         position: relative;
         top: -25px;
     }
 .main{
-    top: -90px;
+    top: -30px;
 }
     
 
