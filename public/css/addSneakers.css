@@ -83,25 +83,6 @@ main {
     opacity: 1;
 }
 
-
-/*
-#nombre {
-    padding: 5px 10px;
-}
-
-#precio {
-    padding: 5px 10px;
-}
-
-#talles {
-    padding: 5px 25px;
-}
-
-#color {
-    padding: 5px 25px;
-}
-*/
-
 .container-publicar-producto {
     justify-content: center;
     display: flex;
