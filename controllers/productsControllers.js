@@ -2,27 +2,30 @@ const path = require ('path');
 
 const productsControllers= {
 
+    getListProducts: (req, res)=>{
+        res.render('productsList', { title : 'Productos'});
+    },
     getDetail: (req, res)=>{
-        res.render('detail');
+        res.render('detail', { title : 'Detalle'});
     },
 
     getSelectCategory: (req, res) => {
-        res.render('selectCategory');
+        res.render('selectCategory', { title : 'Selecion de Categoria'});
     },
 
     getAddSneakers: (req, res) => {
-        res.render('addSneakers');
+        res.render('addSneakers', { title : 'Agregar Calzado'});
     },
 
     getAddClothes: (req, res) => {
-        res.render('addClothes');
+        res.render('addClothes', { title : 'Agregar Vestimenta'});
     },
 
     getEdit: (req, res) => {
-        res.render('editProduct');
+        res.render('editProduct', { title : 'Editar Producto'});
     },
     getCar: (req, res)=>{
-        res.render('carrito')
+        res.render('carrito', { title : 'Carrito'})
     }
 
 }

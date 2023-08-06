@@ -1,0 +1,188 @@
+.section-oversize{
+    /* background-image: url(../img/oversize/section-oversize1.jpg); */
+   /*  background-image: url(../img/oversize/section-oversize2.png); */
+    background-size: contain;
+     background-repeat: round;
+}
+.section-sneakers{
+    background-image: url(../img/sneakers/section6.jpg);
+    /* background-image: url(../img/sneakers/section7.png); */
+    background-size: cover;
+    border-radius: 50%;
+ 
+}
+.section-oversize, .section-sneakers{
+    width: 80%;
+    margin: 0 auto;
+  
+}
+
+
+.img-section-oversize img{
+    position: absolute;
+    top: 227px;
+    width: 71%;
+    border-radius: 15%;
+    height: 610px;
+    filter: opacity(30%);
+}
+.flip-card-oversize {
+
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition: all 0.3s ease-in-out;
+    /* background-image: linear-gradient(45deg, #CEC2B7, #b49d86); */
+    height: 300px;
+    perspective: 1000px;
+    margin: 10px;
+    border: solid darkgoldenrod 2px;
+    border-radius: 16px;
+
+}
+
+.flip-card-oversize:hover {
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+}
+
+.flip-card-inner-oversize {
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card-oversize:hover .flip-card-inner-oversize {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front-oversize,
+.flip-card-back-oversize {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+/* .flip-card-front-oversize {
+    background-image: linear-gradient(45deg, #CEC2B7, #b49d86);
+} */
+
+.flip-card-front-oversize img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+
+}
+
+.flip-card-back-oversize {
+    background-image: linear-gradient(45deg, #333333, #ecebea);
+    
+
+
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-back-oversize img {
+    width: 50%;
+    
+    filter: opacity(50%);
+}
+
+
+
+.flip-card-back-oversize h3,
+.flip-card-back-oversize h1 {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: rgb(218, 162, 23);
+    text-shadow: 1px 1px#333333 ;
+}
+.flip-card-back-oversize h3{
+    top: -160px;
+    
+    
+}
+/* SNEAKERS */
+.flip-card {
+
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition: all 0.3s ease-in-out;
+    /* background-image: linear-gradient(45deg, #CEC2B7, #b49d86); */
+    height: 250px;
+    perspective: 1000px;
+    margin: 10px;
+    border: solid darkgoldenrod 2px;
+    border-radius: 16px;
+
+}
+
+.flip-card:hover {
+    box-shadow: 0px 0px 20px rgb(100, 100, 100);
+}
+
+.flip-card-inner {
+    /* display: flex;
+    justify-content: space-around;
+    align-items: center; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+/* .flip-card-front {
+     background-image: linear-gradient(45deg, #CEC2B7, #b49d86); 
+} */
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+
+}
+
+.flip-card-back {
+    background-image: linear-gradient(45deg, #5A3438, #A64555);
+    
+    transform: rotateY(180deg);
+
+}
+
+.flip-card-back img {
+    width: 190px;
+    margin-bottom: auto;
+
+}
+
+.flip-card-back h3,
+.flip-card-back h1 {
+    color: #CEC2B7;
+    margin: 0;
+    font-size: 13px;
+}
