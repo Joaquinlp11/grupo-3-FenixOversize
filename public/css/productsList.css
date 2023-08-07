@@ -3,17 +3,12 @@
    /*  background-image: url(../img/oversize/section-oversize2.png); */
     background-size: contain;
      background-repeat: round;
+     margin-top: 100px;
 }
-.section-sneakers{
-    background-image: url(../img/sneakers/section6.jpg);
-    /* background-image: url(../img/sneakers/section7.png); */
-    background-size: cover;
-    border-radius: 50%;
- 
-}
+
 .section-oversize, .section-sneakers{
     width: 80%;
-    margin: 0 auto;
+    margin: 60px auto;
   
 }
 
@@ -25,6 +20,7 @@
     border-radius: 15%;
     height: 610px;
     filter: opacity(30%);
+    display: none;
 }
 .flip-card-oversize {
 
@@ -185,4 +181,27 @@
     color: #CEC2B7;
     margin: 0;
     font-size: 13px;
+}
+
+@media (min-width: 768px) {
+    .img-section-oversize img{
+        
+        display: none;
+    }
+
+    .section-sneakers{
+        background-image: url(../img/sneakers/section6.jpg);
+        /* background-image: url(../img/sneakers/section7.png); */
+        background-size: cover;
+        border-radius: 50%;
+     
+    }
+}
+
+@media (min-width: 1200px) {
+    .img-section-oversize img{
+        
+    top: 300px;
+        display: block;
+    }
 }

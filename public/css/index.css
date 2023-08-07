@@ -28,11 +28,11 @@ h2 {
     background-image: url("/img/homeFenix3.jpg");
     z-index: -5;
     margin: 0px auto;
-    width: 90%;
+    width: 80%;
     /*  padding: 20px; */
     /* position: relative;
       top: -100px; */
-    height: 80vh;
+    height: 50vh;
     background-size: cover;
     background-repeat: round;
     /* background-position: center; */
@@ -71,7 +71,7 @@ h2 {
 /*categorias*/
 
 .section-categorias,
-.section-outfits {
+.section-outfits, .section-index-sneakers {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
@@ -115,60 +115,153 @@ h2 {
 
 .img-card-outfit {
 
+       /* padding: 10%; */
+       max-width: 100%;
+       /* background-color: #67361C; */
+       border: solid 20px;
+}
+.img-card-index-sneaker {
+
     padding: 10%;
     max-width: 100%;
-    background-color: #67361C;
+    /* background-color: #67361C; */
+    border: solid 10px;
+    transition: all 0.3s ease-in-out;
 }
-
-.description {
-    display: none;
-
+.card-category {
    
+    margin: 0 auto;
+   
+
+}
+.img-card-outfit-category {
+
     
-    transition: all 5s ease-in-out;
+    max-width: 100%;
+    
 }
-
-.card:hover .description {
+.description {
     display: block;
-    background-color: #ab95604f;
-   
-    transform: translateY(-5%);
     font-size: 14px;
     text-align: center;
     color: #67361C;
+    background-color: #ab95604f;
+    transform: translateY(-5%);
+    transition: all 5s ease-in-out;
+    margin-bottom: 30px;
+}
+.description-category{
+    
+    background-color: #ab95604f;
+    position: relative;
+    top: -150px;
+    color: aliceblue;
+}
+.description-category h2{
+    font-weight: bold;
+    text-align: center;
+ 
+    color: #ffe3d4;
+    font-size: xx-large;
 }
 
+.all-products a{
+    padding: 30px;
+    background-color: #67361c;
+    color: beige;
+    margin-top: 70px;
+    display: block;
+    width: 300px;
+    text-align: center;
+    font-size: 1.2rem;
+}
 @media (min-width: 480px) {
 
     .section-categorias,
-    .section-outfits {
+    .section-outfits, .section-index-sneakers {
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
+    .description-category {
+        top: -200px;
+        font-size: xxx-large;
+    }
+    .all-products a{
+        
+        width: 350px;
+        transition: all 0.3s ease-in-out;
+    }
+    .all-products a:hover{
+        
+        background-color: #000000bd;
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .description-category {
+        top: -350px;
+        font-size: 70px;
+    }
+    .description-category h2 {
+        font-size: 70px;
+    }
 }
 
 @media (min-width: 1200px) {
 
-    .banner-main {
-        width: 100%;
-        margin: auto;
-    }
+    
 
     .container-banner {
-        height: 100vh;
-        top: -45px;
+        height: 60vh;
+        top: -50px;
     }
 
     .container-categorias,
-    .container-outfits {
+    .container-outfits,.container-index-sneakers {
         margin: auto;
         width: 90%;
     }
 
     .section-categorias,
-    .section-outfits {
+    .section-outfits, .section-index-sneakers {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
     }
+
+    .card-category {
+        display: grid;
+        width: 70%;
+        margin: 5px auto;
+        /* border: solid darkgoldenrod; */
+    
+    }
+
+    .description-category {
+        
+        width: 90%;
+        margin: auto;
+        top: -360px;
+        text-shadow: -6px 7px 0px #000000bd;
+    }
+
+    .img-card-outfit-category {
+        
+        padding: 10px;
+        border: solid #67361c 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .img-card-index-sneaker:hover {
+        width: 300px;
+        padding: 0;
+       
+        border: ridge #67361C 10px;
+        box-shadow: 1px 1px 1px #000000bd;
+       box-shadow: inset 2px 2px 2px #f0e32b;
+       
+    }
+    
 }

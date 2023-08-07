@@ -410,17 +410,19 @@ img.mobile-logo-wrapper {
         text-align: center;
     }
 
-    .menu-vertical{
+    .menu-vertical {
         display: flex;
         align-items: center;
-      
+
         transition: all 0.3ms;
     }
-    .menu-vertical:hover{
-      
+
+    .menu-vertical:hover {
+
         border: #b97c42 2px solid;
-       
+
     }
+
     .menu-vertical span {
         font-size: 16px;
         color: #67361C;
@@ -431,7 +433,7 @@ img.mobile-logo-wrapper {
         display: flex;
         margin: 0 auto;
         width: 30%;
-       /*  height: 350px; */
+        /*  height: 350px; */
 
     }
 
@@ -480,7 +482,7 @@ img.mobile-logo-wrapper {
     .li-text-pc {
         color: #CEC2B7;
         position: relative;
-        
+
     }
 
     .li-text-pc:hover {
@@ -517,4 +519,40 @@ img.mobile-logo-wrapper {
     .form-login {
         min-width: 350px;
     }
+
+    .pc-search-car-style {
+        position: relative;
+    top: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 26% 0% 5%;
+    justify-items: center;
+    justify-content: end;
+    }
+
+    
+    .search-input {
+        opacity: 1;
+        width: 300px;
+        transition: all 0.5s ease-out ;
+    }
+    .btn-search-pc {
+        background: transparent;
+        border: none;
+        display: grid;
+        justify-content: space-around;
+        justify-items: stretch;
+        grid-template-columns: 100% 13%;
+        cursor: pointer;
+        color: #67361C;
+        
+    }
+
+    .search-input:focus {
+       
+        background-color: #ebc8a6;
+        
+    }
+
+    
 }
