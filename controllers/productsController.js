@@ -26,8 +26,7 @@ const productsControllers= {
     },
     getCar: (req, res)=>{
         res.render('carrito', { title : 'Carrito'})
-    }
-
+    },
 }
 
 module.exports = productsControllers

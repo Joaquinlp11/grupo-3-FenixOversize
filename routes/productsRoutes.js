@@ -1,5 +1,5 @@
 const express = require ('express')
-const productsControllers = require('../controllers/productsControllers')
+const productsControllers = require('../controllers/productsController')
 const router = express.Router();
 
 //@get /products
@@ -11,9 +11,10 @@ router.get ('/detail', productsControllers.getDetail);
 router.get ('/addsneakers', productsControllers.getAddSneakers);
 
 router.get ('/selectcategory', productsControllers.getSelectCategory);
-//@get /products
-router.get ( '/detail' , productsControllers.getDetail );
-router.get ( '/car' , productsControllers.getCar);
+
+router.get ('/detail' , productsControllers.getDetail );
+
+router.get ('/car' , productsControllers.getCar);
 
 router.get ('/addclothes', productsControllers.getAddClothes);
 
