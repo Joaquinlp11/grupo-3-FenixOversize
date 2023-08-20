@@ -430,20 +430,20 @@ img.mobile-logo-wrapper {
     }
 
     .logo-pc {
-        display: flex;
-        margin: 0 auto;
-        width: 30%;
-        /*  height: 350px; */
+    display: flex;
+    margin: 0 auto;
+    width: 30%;
+    display: inline-block;
+        
 
     }
 
     .logo-pc img {
 
-        margin: 0 auto;
-        width: 40%;
+        width: 30%;
         position: relative;
-        /* top: -50px; */
-        height: 40%;
+        height: 90%;
+        left: 600px;
     }
 
     .login-username label,
@@ -525,7 +525,7 @@ img.mobile-logo-wrapper {
     top: 30px;
     text-align: center;
     display: grid;
-    grid-template-columns: 26% 0% 5%;
+    grid-template-columns: 23% 3% 3% 3%;
     justify-items: center;
     justify-content: end;
     }
@@ -533,7 +533,7 @@ img.mobile-logo-wrapper {
     
     .search-input {
         opacity: 1;
-        width: 300px;
+        width: 270px;
         transition: all 0.5s ease-out ;
     }
     .btn-search-pc {

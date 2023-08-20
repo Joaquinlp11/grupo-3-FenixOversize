@@ -26,8 +26,25 @@ const productsControllers= {
     },
     getCar: (req, res)=>{
         res.render('carrito', { title : 'Carrito'})
-    }
+    },
 
+    /* categorys */
+    getHoodies: (req, res)=>{
+        res.render('hoodies', { title : 'Hoodies'})
+    },
+    getRemeras: (req, res)=>{
+        res.render('remeras', { title : 'Remeras'})
+    },
+    getPantalones: (req, res)=>{
+        res.render('pantalones', { title : 'Pantalones'})
+    },
+    getBuzos: (req, res)=>{
+        res.render('buzos', { title : 'Buzos'})
+    },
+    getOutfits: (req, res)=>{
+        res.render('outfits', { title : 'Outfits'})
+    },
+    
 }
 
 module.exports = productsControllers

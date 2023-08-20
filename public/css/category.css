@@ -1,0 +1,200 @@
+.section-categorys,.section-buzos {
+    width: 80%;
+    margin: 60px auto;
+
+}
+.container-category h2, .container-category-buzos h2, .container-category-outfits h2{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #67361C;
+    height: 100%;
+    padding: 30px;
+    background-position-y: center;
+    
+}
+.container-category h2 {
+
+    background-image: url(/img/fondo1.jpg);
+    
+}
+.container-category-buzos h2, .container-category-outfits h2 {
+    text-shadow: #c8b9ac 1px 1px 1px;
+    background-size: cover;    
+}
+.container-category-buzos h2 {
+   
+    background-image: url(/img/fondo3.jpg);
+  
+}
+.container-category-outfits h2 {
+   
+    background-image: url(/img/fondo4.jpg);
+   
+    border-radius: 10px;    
+}
+.img-section-categorys img , .img-section-buzos img, .img-section-outfits img{
+    position: absolute;
+    top: 355px;
+    width: 71%;
+    border-radius: 15%;
+    height: 610px;
+    filter: opacity(30%);
+    display: none;
+}
+
+.img-section-outfits img{
+    
+    width: 81%;
+ 
+}
+.section-hoodies-categorys, 
+    .section-category-buzos,
+    .section-category-outfits  {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.flip-card-categorys,.flip-card-buzos,.flip-card-outfits {
+    height: 300px;
+}
+
+.flip-card-categorys,.flip-card-buzos,.flip-card-outfits  {
+
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    transition: all 0.3s ease-in-out;
+    perspective: 1000px;
+    margin: 10px;
+    border: solid darkgoldenrod 2px;
+    border-radius: 16px;
+
+}
+
+.flip-card-categorys, .flip-card-buzos, .flip-card-outfits {
+    height: 300px;
+}
+
+
+
+.flip-card-inner-categorys, .flip-card-inner-buzos,.flip-card-inner-outfits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card-categorys:hover .flip-card-inner-categorys,
+.flip-card-buzos:hover .flip-card-inner-buzos,
+.flip-card-outfits:hover .flip-card-inner-outfits
+{
+    transform: rotateY(180deg);
+}
+
+.flip-card-front-categorys,
+.flip-card-back-categorys,
+.flip-card-front-buzos,
+.flip-card-back-buzos ,
+.flip-card-front-outfits,
+.flip-card-back-outfits {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+.flip-card-front-categorys img ,
+.flip-card-front-buzos img ,
+.flip-card-front-outfits img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+
+}
+.flip-card-back-categorys,
+.flip-card-back-buzos ,
+.flip-card-back-outfits {
+    background-image: linear-gradient(45deg, #67361c, #c8b9ac);
+    transform: rotateY(180deg);
+  
+}
+
+.flip-card-back-categorys img {
+    max-width: 50%;
+    filter: opacity(50%);
+    border-radius: 50%;
+}
+.flip-card-back-buzos img  {
+    max-width: 50%;
+    filter: opacity(50%);
+    border-radius: 30%;
+    height: 130px;
+}
+.flip-card-back-outfits img {
+    max-width: 40%;
+    filter: opacity(50%);
+    border-radius: 50%;
+}
+
+.flip-card-back-categorys h3,
+.flip-card-back-categorys h1,
+.flip-card-back-buzos h3,
+.flip-card-back-buzos h1,
+.flip-card-back-outfits h3,
+.flip-card-back-outfits h1 {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px #67361C;
+}
+
+.flip-card-back-categorys h3 {
+    top: -160px;
+}
+
+@media (min-width: 480px){
+    .section-hoodies-categorys, .section-category-buzos, .section-category-outfits{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .img-section-categorys img, .img-section-buzos img, .img-section-outfits img {
+       position: fixed;
+        display: block;
+    }
+
+    .container-category h2, .container-category-buzos h2,.container-category-outfits h2{
+        font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #c8b9ac;
+    height: 100%;
+    padding: 30px;
+    background-position-y: center;
+    font-size: -webkit-xxx-large;
+    text-shadow: -3px -4px 0px #67361c;
+    border-radius: 10px;
+    }
+}
+
+@media (min-width: 780px) {
+    .section-hoodies-categorys, .section-category-buzos, .section-category-outfits{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .container-category h2, .container-category-buzos h2{
+       background-size: initial;
+    }
+    
+}
+@media (min-width: 1200px){
+    
+}
+

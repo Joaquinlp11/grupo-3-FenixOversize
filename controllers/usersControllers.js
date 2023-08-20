@@ -12,6 +12,10 @@ const usersControllers= {
 
         res.render ( 'register' , { title : 'Registrate'});
     },
+    getUserAcount: ( req , res )=>{
+
+        res.render ( 'userAcount' , { title : 'Mi perfil'});
+    },
  
 }
 
