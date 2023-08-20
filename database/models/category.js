@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             notNULL: true
         },
         product_id: {
-            type: DataTpes.INTEGER,
+            type: DataTypes.INTEGER,
             notNULL: true,
             foreignKey: true
         }

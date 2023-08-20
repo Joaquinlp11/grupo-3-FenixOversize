@@ -1,6 +1,10 @@
+const db = require('../database/models/')
 const brandsController = {
     list: (req, res) => {
-        res.render('brands');
+        db.brands.findAll()
+            .then((brands) => {
+                res.render('brandsList', {brands:brands})
+            })
     }
 };
 

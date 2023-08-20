@@ -7,7 +7,14 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-        <div id="brands-list"></div>
+        <h1>Listado de marcas registradas</h1>
+        <ul>
+            <% for (let i = 0; i < brands.length; i++) { %>
+            <li>
+                <%=brands[i].name%>
+            </li>
+            <% } %>            
+        </ul>
     </main>
     <%- include('../partials/footer') %>
 </body>

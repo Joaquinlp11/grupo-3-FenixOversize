@@ -1,18 +1,18 @@
-module.exports = (sequelize, DataTypes) => {
-    let alias = 'brands';
+module.exports = (sequelize, dataTypes) => {
+    let alias = 'marcas';
     let cols = {
         id: {
-            tipe: DataTypes.INTEGER,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             notNULL: true
         } ,
         name: {
-            tipe: DataTypes.STRING,
+            type: dataTypes.STRING,
             notNULL: true
         },
         product_id: {
-            tipe: DataTpes.INTEGER,
+            type: dataTypes.INTEGER,
             notNULL: true,
             foreignKey: true
         }
@@ -22,6 +22,8 @@ module.exports = (sequelize, DataTypes) => {
         timesTamps: false
     };
     
-    const brands = sequelize.define(alias, cols, config);
+    const brand = sequelize.define(alias, cols, config);
+
+    return brand;
 
 };
