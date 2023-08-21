@@ -1,0 +1,70 @@
+.main-user-acuont {
+    color: #fff;
+    /* border: solid; */
+    margin: 60px auto;
+    width: 90%;
+}
+
+.img-acount {
+    display: block;
+    width: min(40% , 70%);
+    margin: auto;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+
+.container-user-acount {
+    width: min(70% , 60%);
+    display: block;
+    margin: auto;
+}
+
+.info-user {
+    /* display: grid; */
+    grid-auto-flow: column;
+    margin: 15px auto;
+    display: block;
+}
+
+.label-container {
+    
+    display: grid;
+    font-size: 1rem;
+   
+}
+
+.label-user-acount {
+    /* margin: auto 10px; */
+    color: #67361C;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.label-info-acount {
+    border-bottom: #7e6456bb solid 1px;
+    color: #9a622f;
+}
+#password-user{
+    -webkit-text-security: disc;
+}
+
+
+@media (min-width:480px) {
+
+
+
+    .container-user-acount {
+       width: 60%;
+    }
+
+    .img-acount {
+       
+        max-width: 20%;
+    }
+
+    .info-user {
+        max-width: inherit;
+    }
+
+
+}

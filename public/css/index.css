@@ -36,7 +36,7 @@ h2 {
     background-size: cover;
     background-repeat: round;
     /* background-position: center; */
-    animation: bannerAnimation 8s infinite forwards;
+    animation: bannerAnimation 8s infinite alternate-reverse;
     position: relative;
     margin-top: 50px;
 }
@@ -47,7 +47,7 @@ h2 {
 }
 
 @keyframes bannerAnimation {
-    0% {
+    1% {
         background-image: url("/img/homeFenix3.jpg");
     }
 
@@ -122,10 +122,10 @@ h2 {
 }
 .img-card-index-sneaker {
 
-    padding: 10%;
+    
     max-width: 100%;
-    /* background-color: #67361C; */
-    border: solid 10px;
+    
+    border: solid 6px;
     transition: all 0.3s ease-in-out;
 }
 .card-category {
@@ -166,14 +166,15 @@ h2 {
 }
 
 .all-products a{
-    padding: 30px;
+    padding: 20px;
     background-color: #67361c;
     color: beige;
-    margin-top: 70px;
+    margin-top: 40px;
     display: block;
-    width: 300px;
+    width: 230px;
     text-align: center;
-    font-size: 1.2rem;
+    margin: auto;
+    font-size: 1rem;
 }
 @media (min-width: 480px) {
 
@@ -195,7 +196,7 @@ h2 {
     .all-products a:hover{
         
         background-color: #000000bd;
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
     
 }

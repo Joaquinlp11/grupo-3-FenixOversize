@@ -18,6 +18,7 @@ body {
     position: relative;
     padding: 0 15px;
     width: 100%;
+    z-index: 8;
 }
 
 .nav-mobile {
@@ -377,6 +378,7 @@ img.mobile-logo-wrapper {
         transform-origin: top left;
         transform: translateY(100%) rotate(-90deg);
         justify-content: space-between;
+        z-index: 6;
     }
 
     li {
@@ -408,13 +410,15 @@ img.mobile-logo-wrapper {
         align-items: center;
         justify-content: center;
         text-align: center;
+        z-index: 7;
     }
 
     .menu-vertical {
         display: flex;
         align-items: center;
-
         transition: all 0.3ms;
+        position: relative;
+        z-index: 9;
     }
 
     .menu-vertical:hover {
@@ -430,20 +434,21 @@ img.mobile-logo-wrapper {
     }
 
     .logo-pc {
-        display: flex;
-        margin: 0 auto;
-        width: 30%;
-        /*  height: 350px; */
+    display: flex;
+    margin: 0 auto;
+    width: 30%;
+    display: inline-block;
+    position: relative;
+    z-index: 5;
 
     }
 
     .logo-pc img {
 
-        margin: 0 auto;
-        width: 40%;
+        width: 30%;
         position: relative;
-        /* top: -50px; */
-        height: 40%;
+        height: 90%;
+        left: 600px;
     }
 
     .login-username label,
@@ -525,7 +530,7 @@ img.mobile-logo-wrapper {
     top: 30px;
     text-align: center;
     display: grid;
-    grid-template-columns: 26% 0% 5%;
+    grid-template-columns: 23% 3% 3% 3%;
     justify-items: center;
     justify-content: end;
     }
@@ -533,7 +538,7 @@ img.mobile-logo-wrapper {
     
     .search-input {
         opacity: 1;
-        width: 300px;
+        width: 270px;
         transition: all 0.5s ease-out ;
     }
     .btn-search-pc {
