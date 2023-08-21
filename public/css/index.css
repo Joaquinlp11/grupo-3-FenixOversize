@@ -122,10 +122,10 @@ h2 {
 }
 .img-card-index-sneaker {
 
-    padding: 10%;
+    
     max-width: 100%;
-    /* background-color: #67361C; */
-    border: solid 10px;
+    
+    border: solid 6px;
     transition: all 0.3s ease-in-out;
 }
 .card-category {

@@ -18,6 +18,7 @@ body {
     position: relative;
     padding: 0 15px;
     width: 100%;
+    z-index: 8;
 }
 
 .nav-mobile {
@@ -377,6 +378,7 @@ img.mobile-logo-wrapper {
         transform-origin: top left;
         transform: translateY(100%) rotate(-90deg);
         justify-content: space-between;
+        z-index: 6;
     }
 
     li {
@@ -408,13 +410,15 @@ img.mobile-logo-wrapper {
         align-items: center;
         justify-content: center;
         text-align: center;
+        z-index: 7;
     }
 
     .menu-vertical {
         display: flex;
         align-items: center;
-
         transition: all 0.3ms;
+        position: relative;
+        z-index: 9;
     }
 
     .menu-vertical:hover {
@@ -434,7 +438,8 @@ img.mobile-logo-wrapper {
     margin: 0 auto;
     width: 30%;
     display: inline-block;
-        
+    position: relative;
+    z-index: 5;
 
     }
 

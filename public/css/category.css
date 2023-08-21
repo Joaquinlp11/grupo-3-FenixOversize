@@ -1,9 +1,24 @@
-.section-categorys,.section-buzos {
+.section-categorys,
+.section-buzos {
     width: 80%;
     margin: 60px auto;
-
+    position: relative;
+    z-index: -1;
 }
-.container-category h2, .container-category-buzos h2, .container-category-outfits h2{
+
+.container-category,
+.container-category-buzos,
+.container-category-outfits,
+.container-category-remeras,
+.container-category-pantalones {
+    position: relative;
+    z-index: 2;
+}
+.container-category h2,
+.container-category-buzos h2,
+.container-category-outfits h2,
+.container-category-remeras h2 ,
+.container-category-pantalones h2 {
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -11,29 +26,43 @@
     height: 100%;
     padding: 30px;
     background-position-y: center;
-    
-}
-.container-category h2 {
 
+}
+
+.container-category h2 {
     background-image: url(/img/fondo1.jpg);
-    
 }
-.container-category-buzos h2, .container-category-outfits h2 {
+
+.container-category-buzos h2,
+.container-category-outfits h2,
+.container-category-remeras h2 {
     text-shadow: #c8b9ac 1px 1px 1px;
-    background-size: cover;    
+    background-size: cover;
 }
+
 .container-category-buzos h2 {
-   
+
     background-image: url(/img/fondo3.jpg);
-  
+
 }
+
 .container-category-outfits h2 {
-   
     background-image: url(/img/fondo4.jpg);
-   
-    border-radius: 10px;    
+    border-radius: 10px;
 }
-.img-section-categorys img , .img-section-buzos img, .img-section-outfits img{
+
+.container-category-remeras h2 {
+    background-image: url(/img/fondo6.jpg);
+
+}
+.container-category-pantalones h2 {
+    background-image: url(/img/fondo11.jpg);
+
+}
+
+.img-section-categorys img,
+.img-section-buzos img,
+.img-section-outfits img  {
     position: absolute;
     top: 355px;
     width: 71%;
@@ -43,24 +72,82 @@
     display: none;
 }
 
-.img-section-outfits img{
-    
+.img-section-outfits img {
     width: 81%;
- 
 }
-.section-hoodies-categorys, 
-    .section-category-buzos,
-    .section-category-outfits  {
+
+.img-section-remeras img {
+    position: absolute;
+    top: 355px;
+    width: 60%;
+    height: 410px;
+    filter: opacity(30%);
+    right: 260px;
+    display: none;
+    
+}
+.img-section-pantalones img{
+    position: absolute;
+    top: 663px;
+    width: 80%;
+    border-radius: 15%;
+    height: 410px;
+    filter: opacity(30%);
+    display: none;
+}
+
+.container-pants{
+   display: none;
+}
+.pants {
+    display: grid;
+    align-content: stretch;
+    justify-items: center;
+    display: none;
+}
+.pants img{
+    height: 250px;
+    border: inset transparent;
+    /* border-radius: 10pc; */
+}
+.pants img{
+    height: 250px;
+    border: inset transparent;
+    /* border-radius: 10pc; */
+}
+.pants p{ 
+    color: #67361C;
+    
+    border: inset transparent;
+    /* border-radius: 10pc; */
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.section-hoodies-categorys,
+.section-category-buzos,
+.section-category-outfits,
+.section-category-remeras,
+.section-category-pantalones {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
 }
 
-.flip-card-categorys,.flip-card-buzos,.flip-card-outfits {
+.flip-card-categorys,
+.flip-card-buzos,
+.flip-card-outfits,
+.flip-card-remeras,
+.flip-card-pantalones {
     height: 300px;
 }
 
-.flip-card-categorys,.flip-card-buzos,.flip-card-outfits  {
+.flip-card-categorys,
+.flip-card-buzos,
+.flip-card-outfits,
+.flip-card-remeras,
+.flip-card-pantalones {
 
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     transition: all 0.3s ease-in-out;
@@ -71,13 +158,12 @@
 
 }
 
-.flip-card-categorys, .flip-card-buzos, .flip-card-outfits {
-    height: 300px;
-}
 
-
-
-.flip-card-inner-categorys, .flip-card-inner-buzos,.flip-card-inner-outfits {
+.flip-card-inner-categorys,
+.flip-card-inner-buzos,
+.flip-card-inner-outfits,
+.flip-card-inner-remeras,
+.flip-card-inner-pantalones {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -89,17 +175,22 @@
 
 .flip-card-categorys:hover .flip-card-inner-categorys,
 .flip-card-buzos:hover .flip-card-inner-buzos,
-.flip-card-outfits:hover .flip-card-inner-outfits
-{
+.flip-card-outfits:hover .flip-card-inner-outfits,
+.flip-card-remeras:hover .flip-card-inner-remeras,
+.flip-card-pantalones:hover .flip-card-inner-pantalones {
     transform: rotateY(180deg);
 }
 
 .flip-card-front-categorys,
 .flip-card-back-categorys,
 .flip-card-front-buzos,
-.flip-card-back-buzos ,
+.flip-card-back-buzos,
 .flip-card-front-outfits,
-.flip-card-back-outfits {
+.flip-card-back-outfits,
+.flip-card-front-remeras,
+.flip-card-back-remeras ,
+.flip-card-front-pantalones,
+.flip-card-back-pantalones {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -108,20 +199,25 @@
     border-radius: 16px;
 }
 
-.flip-card-front-categorys img ,
-.flip-card-front-buzos img ,
-.flip-card-front-outfits img {
+.flip-card-front-categorys img,
+.flip-card-front-buzos img,
+.flip-card-front-outfits img,
+.flip-card-front-remeras img ,
+.flip-card-front-pantalones img {
     width: 100%;
     height: 100%;
     border-radius: 16px;
 
 }
+
 .flip-card-back-categorys,
-.flip-card-back-buzos ,
-.flip-card-back-outfits {
+.flip-card-back-buzos,
+.flip-card-back-outfits,
+.flip-card-back-remeras,
+.flip-card-back-pantalones {
     background-image: linear-gradient(45deg, #67361c, #c8b9ac);
     transform: rotateY(180deg);
-  
+
 }
 
 .flip-card-back-categorys img {
@@ -129,24 +225,31 @@
     filter: opacity(50%);
     border-radius: 50%;
 }
-.flip-card-back-buzos img  {
+
+.flip-card-back-buzos img {
     max-width: 50%;
     filter: opacity(50%);
     border-radius: 30%;
     height: 130px;
 }
-.flip-card-back-outfits img {
+
+.flip-card-back-outfits img,.flip-card-back-remeras img, .flip-card-back-pantalones img {
     max-width: 40%;
     filter: opacity(50%);
     border-radius: 50%;
 }
+
 
 .flip-card-back-categorys h3,
 .flip-card-back-categorys h1,
 .flip-card-back-buzos h3,
 .flip-card-back-buzos h1,
 .flip-card-back-outfits h3,
-.flip-card-back-outfits h1 {
+.flip-card-back-outfits h1,
+.flip-card-back-remeras h3,
+.flip-card-back-remeras h1 ,
+.flip-card-back-pantalones h3,
+.flip-card-back-pantalones h1 {
     position: relative;
     margin-bottom: 20px;
     font-size: 16px;
@@ -158,43 +261,85 @@
     top: -160px;
 }
 
-@media (min-width: 480px){
-    .section-hoodies-categorys, .section-category-buzos, .section-category-outfits{
+@media (min-width: 480px) {
+
+    .section-hoodies-categorys,
+    .section-category-buzos,
+    .section-category-outfits,
+    .section-category-remeras,
+    .section-category-pantalones {
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
-    .img-section-categorys img, .img-section-buzos img, .img-section-outfits img {
-       position: fixed;
+    .img-section-categorys img,
+    .img-section-buzos img,
+    .img-section-outfits img,
+    .img-section-remeras img ,
+    .img-section-pantalones img {
+        position: fixed;
         display: block;
     }
 
-    .container-category h2, .container-category-buzos h2,.container-category-outfits h2{
+    .container-category h2,
+    .container-category-buzos h2,
+    .container-category-outfits h2,
+    .container-category-remeras h2,
+    .container-category-pantalones h2{
         font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    color: #c8b9ac;
-    height: 100%;
-    padding: 30px;
-    background-position-y: center;
-    font-size: -webkit-xxx-large;
-    text-shadow: -3px -4px 0px #67361c;
-    border-radius: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #67361C;
+        height: 100%;
+        padding: 30px;
+        background-position-y: center;
+        font-size: -webkit-xxx-large;
+        text-shadow: -3px -4px 0px #98989d;
+        border-radius: 10px;
     }
+
 }
 
 @media (min-width: 780px) {
-    .section-hoodies-categorys, .section-category-buzos, .section-category-outfits{
+
+    .section-hoodies-categorys,
+    .section-category-buzos,
+    .section-category-outfits,
+    .section-category-remeras,
+    .section-category-pantalones {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
     }
 
-    .container-category h2, .container-category-buzos h2{
-       background-size: initial;
+    .container-category h2,
+    .container-category-buzos h2 {
+        background-size: initial;
     }
     
-}
-@media (min-width: 1200px){
+    .container-category-pantalones h2 {
+        background-size: cover;
+    }
+    
     
 }
 
+@media (min-width: 1200px) {
+    .container-pants {
+        
+        display: grid;
+        height: 290px;
+        position: relative;
+        grid-auto-flow: column;
+        justify-content: space-between;
+    }
+    .pants{
+        display: grid;
+    }
+   .container-category-pantalones hr{
+        border-color: #67361C;
+        border-width: 2px;
+        border-radius: 10pc;
+       
+    }
+
+}
