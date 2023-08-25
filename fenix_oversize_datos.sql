@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-08-2023 a las 12:40:10
+-- Tiempo de generación: 24-08-2023 a las 04:55:12
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -22,41 +22,49 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-DROP DATABASE IF EXISTS fenix_oversize_datos;
-CREATE DATABASE fenix_oversize_datos;
-USE fenix_oversize_datos;
+
 --
 -- Estructura de tabla para la tabla `brands`
 --
-DROP TABLE IF EXISTS `brands`;
 
 CREATE TABLE `brands` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id` int(10) UNSIGNED NOT NULL,
   `name` varchar(40) NOT NULL,
-  `products_id` int(10) unsigned NOT NULL,
-  FOREIGN KEY (products_id) REFERENCES products(id)
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `brands`
+--
+
+INSERT INTO `brands` (`id`, `name`, `product_id`) VALUES
+(2, 'nike', 1);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `category`
 --
-DROP TABLE IF EXISTS `category`;
 
 CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `name` varchar(40) NOT NULL,
-  `products_id` int(11) NOT NULL,
-  FOREIGN KEY (products_id) REFERENCES products(id)
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `category`
+--
+
+INSERT INTO `category` (`id`, `name`, `product_id`) VALUES
+(1, 'sneakers', 1),
+(2, 'pantalones', 2);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `products`
 --
-DROP TABLE IF EXISTS `products`;
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
@@ -66,32 +74,42 @@ CREATE TABLE `products` (
   `category_id` int(11) NOT NULL,
   `color` varchar(20) NOT NULL,
   `sizes` tinyint(4) NOT NULL,
-  `price` mediumint(9) NOT NULL,
-  FOREIGN KEY (category_id) REFERENCES products(id)
+  `price` mediumint(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `image`, `category_id`, `color`, `sizes`, `price`) VALUES
+(1, 'zapatilla nike', 'fffffff', '', 1, 'rojo', 36, 2500),
+(2, 'jogger', 'pantalon jogger', '', 2, 'rojo', 28, 1000);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `products_users`
 --
-DROP TABLE IF EXISTS `products_users`;
 
 CREATE TABLE `products_users` (
   `id` int(11) NOT NULL,
-  `products_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-  FOREIGN KEY (products_id) REFERENCES products(id),
-  FOREIGN KEY (user_id) REFERENCES user(id)
-
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `products_users`
+--
+
+INSERT INTO `products_users` (`id`, `product_id`, `user_id`) VALUES
+(1, 1, 1),
+(2, 2, 1);
 
 -- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `users`
 --
-DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
@@ -100,8 +118,16 @@ CREATE TABLE `users` (
   `email` varchar(40) NOT NULL,
   `password` mediumint(9) NOT NULL,
   `tipo` varchar(30) NOT NULL DEFAULT 'cliente',
-  `image` varchar(40) DEFAULT NULL,
+  `image` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `tipo`, `image`) VALUES
+(1, 'jean', 'carlos', 'emai@gmail.com', 5452, 'cliente', NULL),
+(2, 'joaquin', 'Lopez', 'lopez@gmail.com', 884949, 'cliente', NULL);
 
 --
 -- Índices para tablas volcadas
@@ -112,34 +138,34 @@ CREATE TABLE `users` (
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `products_id` (`products_id`);
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indices de la tabla `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `name` (`name`);
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `name` (`name`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `products_users`
 --
 ALTER TABLE `products_users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -149,31 +175,54 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `products_users`
 --
 ALTER TABLE `products_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `brands`
+--
+ALTER TABLE `brands`
+  ADD CONSTRAINT `brands_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Filtros para la tabla `category`
+--
+ALTER TABLE `category`
+  ADD CONSTRAINT `category_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Filtros para la tabla `products_users`
+--
+ALTER TABLE `products_users`
+  ADD CONSTRAINT `products_users_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `products_users_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
