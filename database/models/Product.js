@@ -1,11 +1,11 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Product';
-    let cols = {
+    const alias = 'Product';
+    const cols = {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
-            notNULL: true
+            
         },
         name: {
             type: DataTypes.STRING,
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             notNULL: true
         },
-        sizes: {
+        size: {
             type: DataTypes.INTEGER,
             notNULL: true
         },
@@ -31,29 +31,39 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             notNULL: true
         },
-        category_id: {
+        id_brand: {
             type: DataTypes.INTEGER,
             notNULL: true,
             references: {
-                model: 'category',
+                model: 'brands',
+                key: 'id'
+            }
+        },
+        id_category: {
+            type: DataTypes.INTEGER,
+            notNULL: true,
+            references: {
+                model: 'categorys',
                 key: 'id'
             }
 
         }
+       
     }
-    let config = {
+    const config = {
         tableName: 'products',
         timesTamps: false
-    };
+    }
     
     const Product = sequelize.define(alias, cols, config);
 
-    Product.associate = (models) =>{
+    Product.associate = models =>{
         Product.belongsTo(models.Category, {
-            as: 'category',
+            as: 'categoria',
             timesTamps: false,
-            foreignKey: 'category_id'
+            foreignKey: 'id_category'
         })
     }
     return Product;
-};
+}
+

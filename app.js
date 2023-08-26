@@ -1,15 +1,17 @@
 const express = require('express');
 const path = require('path');
 const methodOverride = require('method-override');
-const app = express();
-
+const fs = require('fs')
 const publicPath = path.join (__dirname, './public');
+ const expressSession = require('express-session');
+const { Product } = require('./database/models');
 
 const mainRoutes = require('./routes/mainRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const productsRoutes = require('./routes/productsRoutes');
 const brandsRoutes = require('./routes/brandsRoutes')
 
+const app = express();
 app.set('view engine' , 'ejs');
 
 app.set ('views' , [ 
@@ -22,6 +24,12 @@ app.set ('views' , [
 app.use ( express.static ( publicPath));
 app.use ( express.urlencoded({ extended: true }));
 app.use ( express.json());
+
+app.use(expressSession({
+    secret: 'este es mi secreto monito123',
+    resave: false,
+    saveUninitialized: true
+}));
 
 /* Routers */
 app.use(mainRoutes);

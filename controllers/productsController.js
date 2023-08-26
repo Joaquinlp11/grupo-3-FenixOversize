@@ -1,9 +1,24 @@
 const path = require ('path');
+const { Product } = require('../database/models');
 
 const productsControllers= {
 
-    getListProducts: (req, res)=>{
-        res.render('productsList', { title : 'Productos'});
+    getListProducts: async (req, res)=>{
+
+        try{
+            const products = await Product.findAll({
+                raw: true,
+                include: 'categoria',
+                
+                nest: true
+            });
+
+            res.render('productsList', { title : 'Productos',products});
+        }catch(error){
+            
+            res.render('productsList', { title : 'Productos',products:[] });
+            console.log(error);
+        }
     },
     getDetail: (req, res)=>{
         res.render('detail', { title : 'Detalle'});
@@ -47,4 +62,4 @@ const productsControllers= {
     
 }
 
-module.exports = productsControllers
+module.exports = productsControllers;

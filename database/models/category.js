@@ -11,14 +11,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             notNULL: true
         },
-        product_id: {
-            type: DataTypes.INTEGER,
-            notNULL: true,
-            foreignKey: true
-        }
+      
     };
     let config = {
-        tableName: 'category',
+        tableName: 'categorys',
         timesTamps: false
     };
     
@@ -26,9 +22,9 @@ module.exports = (sequelize, DataTypes) => {
 
     Category.associate = (models) =>{
         Category.hasMany(models.Product, {
-            as: 'categorys',
+            as: 'categoria',
             timesTamps: false,
-            foreignKey: 'category_id'
+            foreignKey: 'id_category'
         })
     }
     return Category;

@@ -4,8 +4,6 @@
 
     <body>
         <%- include("../partials/header") %>
-           
-
             <section class="section-oversize">
                 <div class="container-categorias">
                     <h2>Productos</h2>
@@ -13,150 +11,31 @@
                     <div class="img-section-oversize"> <img src="/img/oversize/section-oversize1.jpg" alt=""></div>
                     <div class="section-categorias">
 
-                        <!-- **************************************** -->
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
 
-                                    <img src="/img/oversize/oversize1-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize1-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
-
-                                    <img src="/img/oversize/oversize2-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize2-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
-
-                                    <img src="/img/oversize/oversize3-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize3-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
-
-                                    <img src="/img/oversize/oversize4-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize4-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                         <!-- **************************************** -->
 
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
+                        <% products.forEach(product=> { %>
+                            <div class="flip-card-oversize">
+                                <div class="flip-card-inner-oversize">
+                                    <div class="flip-card-front-oversize">
 
-                                    <img src="/img/oversize/oversize5-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize5-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
+                                        <img src="<%=  product.image%>" alt="" />
+                                    </div>
+                                    <div class="flip-card-back-oversize">
+                                        <a href="">
+                                            <h1>title</h1>
+                                            <img src="<%=  product.image%>" alt="" />
+                                            <h3>$ 6.000</h3>
+                                            <h3>30% Off</h3>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- **************************************** -->
+                            <% }); %>
 
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
-
-                                    <img src="/img/oversize/oversize6-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize6-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
-
-                                    <img src="/img/oversize/oversize7-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize7-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-
-                        <div class="flip-card-oversize">
-                            <div class="flip-card-inner-oversize">
-                                <div class="flip-card-front-oversize">
-
-                                    <img src="/img/oversize/oversize9-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back-oversize">
-                                    <a href="">
-                                        <h1>title</h1>
-                                        <img src="/img/oversize/oversize9-sf.png" alt="" />
-                                        <h3>$ 6.000</h3>
-                                        <h3>30% Off</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- **************************************** -->
-                    <!-- OVERSIZE -->
-                    <!-- **************************************** -->
+                                <!-- **************************************** -->
+                                <!-- OVERSIZE -->
+                                <!-- **************************************** -->
             </section>
 
             <!-- SNEAKERS -->
