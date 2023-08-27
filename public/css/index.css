@@ -209,6 +209,11 @@ h2 {
     .description-category h2 {
         font-size: 70px;
     }
+    .section-categorias,
+    .section-outfits, .section-index-sneakers {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
 }
 
 @media (min-width: 1200px) {

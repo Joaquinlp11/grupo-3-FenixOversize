@@ -499,7 +499,7 @@ img.mobile-logo-wrapper {
     .btn-menu-pc:focus~.scroll-container {
         display: inline-block;
         opacity: 1;
-        transform: rotate(90deg) translate(130%);
+        transform: rotate(90deg) translate(140%);
         transition: all 2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -507,7 +507,7 @@ img.mobile-logo-wrapper {
         position: absolute;
         transform: rotate(90deg);
         border: #917357 solid 5px;
-        top: -180px;
+        top: -215px;
         right: 120px;
         padding: 15px;
         background-color: #67361C;

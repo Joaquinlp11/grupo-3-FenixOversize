@@ -81,7 +81,7 @@
 }
 
 .flip-card-back-oversize {
-    background-image: linear-gradient(45deg, #333333, #ecebea);
+    background-image: linear-gradient(45deg, #6c3d23, #cec2b7);
     transform: rotateY(180deg);
 }
 
