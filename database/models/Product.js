@@ -63,6 +63,13 @@ module.exports = (sequelize, DataTypes) => {
             timesTamps: false,
             foreignKey: 'id_category'
         })
+    },
+    Product.associate = models =>{
+        Product.belongsTo(models.Brand, {
+            as: 'brands',
+            timesTamps: false,
+            foreignKey: 'id_brand'
+        })
     }
     return Product;
 }

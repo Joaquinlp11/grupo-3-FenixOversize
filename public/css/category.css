@@ -251,10 +251,11 @@
 .flip-card-back-pantalones h3,
 .flip-card-back-pantalones h1 {
     position: relative;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     font-size: 16px;
     color: #ffffff;
     text-shadow: 1px 1px #67361C;
+    margin: 6px;
 }
 
 .flip-card-back-categorys h3 {

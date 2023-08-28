@@ -1,20 +1,26 @@
 /*MAIN*/
 .main{
-    position: relative;
-    width: 80%;
+    /* position: relative; */
+    width: 90%;
     top: 60px;
     margin: 10px auto;
 }
+
+.container_detail{
+
+}
 .div-img-producto{
     display: flex;
+    border: groove #A97356 13px;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-top: 70px;
+    background: white;
 }
 
 .imagen-producto {
-    width: 70%;
-
-    margin-top: 80px;
+    width: 100%;
+    height: -webkit-fill-available
 }
 
 .palabra-talles {
@@ -44,9 +50,43 @@
 .unidades {
     margin-top: 20px;
 }
+.precio{
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: #6c3d23;
+}
+.seccion-talles, .seccion-colores{
+    font-size: 1.45rem;
+    color: #A97356;
+    
+}
+.seccion-talles h4, .seccion-colores h4{
+    font-size: 1.45rem;
+    color: #834F34 
+}
+#price{
+    font-weight: 200;
+}
+.select-colores{
+display: inline;
+}
+.seccion-colores select{
+    padding: 5px;
+    width: 80px;
+    font-size: 1.27rem;
+    border-block-color: rgb(108,61,35);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.nombre-producto{
+    color: #834F34;
+}
+
 .informacion-compra {
    margin: auto;
-   width: min(70%);
+   width: min(100%);
+   text-align: -webkit-center;
 }
 .compra-carrito{
     display: flex;
@@ -100,7 +140,15 @@
 
 @media (min-width: 480px) {
 
-   
+    .div-img-producto {
+        width: 310px;
+        /* margin: 0 0 20px 20px; */
+        margin-top: 90px;
+        /* position: relative; */
+        right: -58px;
+        height: 430px;
+        margin: 90px auto 0;
+    }
 
 }
 
@@ -116,11 +164,11 @@
 .informacion-compra{
     width: min(50%);
 }
-    .div-img-producto {
+   /*  .div-img-producto {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-    }
+    } */
 
     .imagen-producto {
         width: 100%;
@@ -141,12 +189,7 @@
 
 @media (min-width: 1200px) {
 
-    .imagen-producto {
-        width: 500px;
-       /*  height: 500px; */
-        position: relative;
-        top: -25px;
-    }
+    
 .main{
     top: -30px;
 }

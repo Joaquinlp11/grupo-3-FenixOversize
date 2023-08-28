@@ -6,13 +6,13 @@ const router = express.Router();
 
 router.get ('/', productsControllers.getListProducts);
 
-router.get ('/detail', productsControllers.getDetail);
+router.get ('/:id/detail' , productsControllers.getDetail );
+
 
 router.get ('/addsneakers', productsControllers.getAddSneakers);
 
 router.get ('/selectcategory', productsControllers.getSelectCategory);
 
-router.get ('/detail' , productsControllers.getDetail );
 
 router.get ('/car' , productsControllers.getCar);
 

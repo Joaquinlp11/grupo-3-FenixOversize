@@ -88,19 +88,22 @@
 .flip-card-back-oversize img {
     width: 50%;
     filter: opacity(50%);
+    border-radius: 3pc;
 }
 
 .flip-card-back-oversize h3,
 .flip-card-back-oversize h1 {
     position: relative;
     margin-bottom: 20px;
-    font-size: 25px;
-    color: rgb(218, 162, 23);
-    text-shadow: 1px 1px#333333;
+    font-size: 18px;
+    color: #eee;
+    text-shadow: -2px 1px 0px #000;
 }
 
 .flip-card-back-oversize h3 {
-    top: -160px;
+    top: -40px;
+    margin: 6px;
+    position: relative
 }
 
 /* SNEAKERS */

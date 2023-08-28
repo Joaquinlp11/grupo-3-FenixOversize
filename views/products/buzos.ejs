@@ -20,7 +20,7 @@
                 <img src="<%=  product.image%>" alt="" />
               </div>
               <div class="flip-card-back-buzos">
-                <a href="">
+                <a href="/products/<%= product.id %>/detail">
                   <h1><%= product.name %></h1>
                   <img src="<%=  product.image%>" alt="" />
                   <h3>
@@ -28,8 +28,7 @@
                 </h3>
                 <h3>$ <%= product.price %>
                 </h3>
-              <!--   <h3><%= product.categoria.name %></h3> -->
-                
+                <h3><%= product.brands.name %></h3>
                 </a>
               </div>
             </div>

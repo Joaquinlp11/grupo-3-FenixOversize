@@ -1,24 +1,35 @@
 const path = require("path");
-const { Product } = require("../database/models");
+const { Product, Brand, Category } = require("../database/models");
 
 const productsControllers = {
   getListProducts: async (req, res) => {
     try {
-      const products = await Product.findAll({
+      const productsList = await Product.findAll({
         raw: true,
-        include: "categoria",
-
+        include: "brands",
         nest: true,
       });
 
-      res.render("productsList", { title: "Productos", products });
+      res.render("productsList", { title: "Productos", productsList });
     } catch (error) {
-      res.render("productsList", { title: "Productos", products: [] });
+      res.render("productsList", { title: "Productos", productsList: [] });
       console.log(error);
     }
   },
-  getDetail: (req, res) => {
-    res.render("detail", { title: "Detalle" });
+  getDetail: async (req, res) => {
+    try {
+      const product =  await Product.findByPk(req.params.id, {
+        include: "brands",
+      });
+      if (product) {
+         res.render("detail", { title: "Detalle", product });
+      } else {
+         res.status(404).send("Producto no encontrado");
+      }
+    } catch (error) {
+      console.log(error);
+       res.status(500).send("Error interno del servidor");
+    }
   },
 
   getSelectCategory: (req, res) => {
@@ -62,6 +73,7 @@ const productsControllers = {
       const productsRemeras = await Product.findAll({
         raw: true,
         include: "categoria",
+        include: "brands",
         nest: true,
         where: {
           id_category: 4,
@@ -94,6 +106,7 @@ const productsControllers = {
       const productsBuzos = await Product.findAll({
         raw: true,
         include: "categoria",
+        include: "brands",
         nest: true,
         where: {
           id_category: 1,
@@ -106,45 +119,37 @@ const productsControllers = {
       console.log(error);
     }
   },
-  getOutfits: async(req, res) => {
-    try{
-        const productsOutfits = await Product.findAll({
-            raw: true,
-            include: 'categoria',
-            nest: true,
-            where:{
-                id_category: 6
-            }
-        })
+  getOutfits: async (req, res) => {
+    try {
+      const productsOutfits = await Product.findAll({
+        raw: true,
+        include: "categoria",
+        nest: true,
+        where: {
+          id_category: 6,
+        },
+      });
 
-        
-        
-        res.render("outfits", { title: "Outfits",productsOutfits });
-    }catch{
-        res.render("outfits", { title: "Outfits",productsOutfits:[] });
-
+      res.render("outfits", { title: "Outfits", productsOutfits });
+    } catch {
+      res.render("outfits", { title: "Outfits", productsOutfits: [] });
     }
-
   },
-  getSneaker: async(req, res) => {
-    try{
-        const productsSneakers = await Product.findAll({
-            raw: true,
-            include: 'categoria',
-            nest: true,
-            where:{
-                id_category: 5
-            }
-        })
+  getSneaker: async (req, res) => {
+    try {
+      const productsSneakers = await Product.findAll({
+        raw: true,
+        include: "categoria",
+        nest: true,
+        where: {
+          id_category: 5,
+        },
+      });
 
-        
-        
-        res.render("sneakers", { title: "Sneakers",productsSneakers });
-    }catch{
-        res.render("sneakes", { title: "Sneakers",productsSneakers:[] });
-
+      res.render("sneakers", { title: "Sneakers", productsSneakers });
+    } catch {
+      res.render("sneakes", { title: "Sneakers", productsSneakers: [] });
     }
-
   },
 };
 
