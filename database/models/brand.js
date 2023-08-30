@@ -1,21 +1,20 @@
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = 'Brand';
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             notNULL: true
         } ,
         name: {
-            type: dataTypes.STRING,
-            notNULL: true
+            type: DataTypes.STRING,
+            notNULL: false
         },
-       
     };
     let config = {
         tableName: 'brands',
-        timesTamps: false
+        timesTamps: true
     };
     
     const Brand = sequelize.define(alias, cols, config);

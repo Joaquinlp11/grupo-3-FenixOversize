@@ -1,11 +1,12 @@
-const db = require('../database/models/')
+const db = require('../database/models/brand')
 const brandsController = {
-    list: (req, res) => {
-        db.brands.findAll()
-            .then((brands) => {
-                res.render('brandsList', {brands:brands})
-            })
-    }
-};
+    list: async (req, res) => {
+        try {
+          const bra = await Product.findAll({
+            raw: true,
+            include: "brands",
+            nest: true,
+          });
+}}
 
 module.exports = brandsController;
