@@ -1,12 +1,19 @@
-const db = require('../database/models/brand')
+const path = require('path');
+const { Brand } = require("../database/models");
+
 const brandsController = {
     list: async (req, res) => {
         try {
-          const bra = await Product.findAll({
+          const brandList = await Brand.findAll({
             raw: true,
             include: "brands",
             nest: true,
-          });
-}}
+        });
 
-module.exports = brandsController;
+        res.render("brandsList", { title: "Marcas", brandList });
+    } catch (error) {
+        res.render("brandsList", { title: "Marcas", brandList: [] });
+        console.log(error);
+    }
+}
+}

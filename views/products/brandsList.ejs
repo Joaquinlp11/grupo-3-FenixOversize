@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('../partials/head') %>
-    <title>Marcas</title>
-</head>
-<body>
-    <%- include('../partials/header') %>
-    <main>
-        <h1>Listado de marcas registradas</h1>
-        <ul>
-            <% for (let i = 0; i < brands.length; i++) { %>
-            <li>
-                <%=brands[i].name%>
-            </li>
-            <% } %>            
-        </ul>
-    </main>
-    <%- include('../partials/footer') %>
-</body>
+<%- include("../partials/head") %>
+
+    <body>
+        <%- include("../partials/header") %>
+            <section class="section-oversize">
+                <div class="container-categorias">
+                    <h2>Productos</h2>
+                    <!-- OVERSIZE -->
+                    <div class="img-section-oversize"> <img src="/img/oversize/section-oversize1.jpg" alt=""></div>
+                    <div class="section-categorias">
+
+
+                        <!-- **************************************** -->
+
+                        <% brandsList.forEach(brand=> { %>
+                            <div class="flip-card-oversize">
+                                <div class="flip-card-inner-oversize">
+                                    <div class="flip-card-front-oversize">
+
+                                        <img src="<%=product.image%>" alt="" />
+                                    </div>
+                                    <div class="flip-card-back-oversize">
+                                        <a href="/products/<%= brand.id %>/detail">
+                                            <h1>
+                                                <%= brand.name %>
+                                            </h1>
+                                            <img src="<%=product.image%>" alt="" />
+                                            <h3>
+                                                <%= brand.id %>
+                                            </h3>
+                                            <h3>
+
+                                            </h3>
+                                            <h3>
+                                                
+                                            </h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+    </body>
 </html>
