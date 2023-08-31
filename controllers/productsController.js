@@ -1,5 +1,5 @@
 const path = require("path");
-const { Product, Brand, Category } = require("../database/models");
+const { Product } = require("../database/models");
 
 const productsControllers = {
   getListProducts: async (req, res) => {

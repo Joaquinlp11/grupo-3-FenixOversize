@@ -1,11 +1,11 @@
 module.exports = (sequelize, dataTypes) => {
 
-    const alias = 'Users';
+    const alias = 'User';
     const cols = {
         id: {
-            autoIncrement: true,
-            primatyKey: true,
-            type: dataTypes.INTEGER
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         first_name: {
             allowNull: false,
@@ -33,7 +33,10 @@ module.exports = (sequelize, dataTypes) => {
         }
     };
     const config = {
-        timeStamps: false
+        tableName: 'users',
+        timestamps: false
     };
-    
+    const User = sequelize.define(alias, cols, config);
+
+    return User;
 }

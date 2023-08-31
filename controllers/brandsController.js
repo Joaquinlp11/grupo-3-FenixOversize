@@ -6,7 +6,6 @@ const brandsController = {
         try {
           const brandList = await Brand.findAll({
             raw: true,
-            include: "brands",
             nest: true,
         });
 
@@ -17,3 +16,5 @@ const brandsController = {
     }
 }
 }
+
+module.exports = brandsController;

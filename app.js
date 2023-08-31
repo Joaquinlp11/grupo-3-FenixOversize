@@ -4,7 +4,7 @@ const methodOverride = require('method-override');
 const fs = require('fs')
 const publicPath = path.join (__dirname, './public');
  const expressSession = require('express-session');
-const { Product } = require('./database/models');
+const { Product, User, Brand, Category } = require('./database/models');
 
 const mainRoutes = require('./routes/mainRoutes');
 const usersRoutes = require('./routes/usersRoutes');

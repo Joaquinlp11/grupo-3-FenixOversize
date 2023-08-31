@@ -4,6 +4,6 @@ const brandsController = require('../controllers/brandsController')
 
 const router = express.Router();
 
-router.get ('/brands-list', brandsController.list);
+router.get('/brands-list', brandsController.list);
 
 module.exports = router;
