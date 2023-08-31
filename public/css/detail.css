@@ -164,12 +164,14 @@ display: inline;
     position: relative;
     top: -70px;
     left: 30px;
+    display: grid;
     text-align: inherit;
+    justify-items: center;
 }
 .div-img-producto {
-    width: 530px;
+    width: 330px;
     
-    height: 630px;
+    height: 430px;
    
 }
 
