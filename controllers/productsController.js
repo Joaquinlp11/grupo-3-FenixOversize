@@ -57,6 +57,7 @@ const productsControllers = {
       const productsHoodies = await Product.findAll({
         raw: true,
         include: "categoria",
+        include: "brands",
         nest: true,
         where: {
           id_category: 3,

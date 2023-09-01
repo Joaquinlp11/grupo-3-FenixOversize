@@ -10,6 +10,7 @@ const router = express.Router();
 router.get ( '/login' , usersControllers.getLogin );
 router.get ( '/register' , usersControllers.getRegister );
 router.get ( '/userAcount' , usersControllers.getUserAcount);
+router.get ( '/userList' , usersControllers.getUserList);
 
 
 module.exports = router;

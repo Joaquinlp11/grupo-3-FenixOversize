@@ -221,7 +221,7 @@
 }
 
 .flip-card-back-categorys img {
-    max-width: 50%;
+    max-width: 40%;
     filter: opacity(50%);
     border-radius: 50%;
 }
@@ -249,7 +249,9 @@
 .flip-card-back-remeras h3,
 .flip-card-back-remeras h1 ,
 .flip-card-back-pantalones h3,
-.flip-card-back-pantalones h1 {
+.flip-card-back-pantalones h1
+.flip-card-back-categorys h3,
+.flip-card-back-categorys h1 {
     position: relative;
     /* margin-bottom: 20px; */
     font-size: 16px;
@@ -258,9 +260,7 @@
     margin: 6px;
 }
 
-.flip-card-back-categorys h3 {
-    top: -160px;
-}
+
 
 @media (min-width: 480px) {
 
