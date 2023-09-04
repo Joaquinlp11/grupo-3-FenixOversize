@@ -12,211 +12,27 @@
         <div class="img-section-outfits"><img src="/img/fondo-outfits.png" alt="" /></div>
         <div class="section-category-outfits">
           <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/1.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/1.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
+          <% productsOutfits.forEach(outfit => { %>
+            
+            <div class="flip-card-outfits">
+              <div class="flip-card-inner-outfits">
+                <div class="flip-card-front-outfits">
+                  <img src="<%= outfit.image %>" alt="" />
+                  </div>
+                  <div class="flip-card-back-outfits">
+                    <a href="/products/<%= outfit.id %>/detail">
+                      <h1><%= outfit.name %></h1>
+                      <img src="<%= outfit.image %>" alt="" />
+                      <h3>$ <%= outfit.price %></h3>
+                      <h3><%= outfit.description %></h3>
+                      <h3><%= outfit.brands.name %></h3>
+                      </a>
+                      </div>
+                      </div>
+                      </div>
+                   <% }); %>
           <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/2.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/2.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/3.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/3.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img
-                  src="/img/category/outfits/4.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img
-                    src="/img/category/outfits/4.jpg"
-                    alt=""
-                  />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- **************************************** -->
-
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-18.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-18.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- **************************************** -->
-
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-19.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-19.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- **************************************** -->
-
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-21.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-21.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-26.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-26.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-            <!-- **************************************** -->
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-29.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-29.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-            <!-- **************************************** -->
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-36.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-36.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-            <!-- **************************************** -->
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-42.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-42.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-            <!-- **************************************** -->
-          <!-- **************************************** -->
-          <div class="flip-card-outfits">
-            <div class="flip-card-inner-outfits">
-              <div class="flip-card-front-outfits">
-                <img src="/img/category/outfits/Outfit-49.jpg" alt="" />
-              </div>
-              <div class="flip-card-back-outfits">
-                <a href="">
-                  <h1>Lorem ipsum dolor</h1>
-                  <img src="/img/category/outfits/Outfit-49.jpg" alt="" />
-                  <h3>$ 6.000</h3>
-                  <h3>30% Off</h3>
-                </a>
-              </div>
-            </div>
-          </div>
-            <!-- **************************************** -->
+          
           
 
         </div>
