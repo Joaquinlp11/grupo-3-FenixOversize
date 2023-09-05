@@ -52,142 +52,28 @@
                 <div class="container-categorias">
                     <div class="section-categorias">
                         <!-- ****************************************** -->
-                        <div class="flip-card">
+                        <% sneakersPro.forEach(element => { %>
+                          
+                          <div class="flip-card">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker2-sf.png" alt="" />
+                                  
+                                  <img src="<%= element.image %>" alt="" />
                                 </div>
                                 <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker2-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
+                                  <a href="/products/<%= element.id %>/detail">
+                                    <h3><%= element.name %></h3>
+                                    <img src="<%= element.image %>" alt="" />
+                                    <h1>$ <%= element.price %></h1>
+                                    <h1><%= element.description %></h1>
+                                    <h1><%= element.brands.name %></h1>
+                                  </a>
                                 </div>
+                              </div>
                             </div>
-                        </div>
+                            <%  }); %>
                         <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker4-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker4-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker8.2-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker8.2-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker9-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker9-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker16-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker16-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker11-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker11-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker12-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker12-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                                <div class="flip-card-front">
-
-                                    <img src="/img/sneakers/sneaker14-sf.png" alt="" />
-                                </div>
-                                <div class="flip-card-back">
-                                    <a href="">
-                                        <h3>title</h3>
-                                        <img src="/img/sneakers/sneaker14-sf.png" alt="" />
-                                        <h1>$ 6.000</h1>
-                                        <h1>10% Off</h1>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- **************************************** -->
+                       
                     </div>
                 </div>
                 </div>

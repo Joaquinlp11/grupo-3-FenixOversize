@@ -1,4 +1,6 @@
 const path = require("path");
+const Sequelize = require('sequelize');
+const { Op } = Sequelize;
 const { Product } = require("../database/models");
 
 const productsControllers = {
@@ -8,11 +10,25 @@ const productsControllers = {
         raw: true,
         include: "brands",
         nest: true,
+        where: {
+          id_category: {
+            [Sequelize.Op.not]: 5, // Excluir productos con id_category igual a 5
+          },
+        },
+      });
+      const sneakersPro = await Product.findAll({
+        raw: true,
+        include: "brands",
+        limit: 8,
+        nest: true,
+        where:{
+          id_category: 5
+        }
       });
 
-      res.render("productsList", { title: "Productos", productsList });
+      res.render("productsList", { title: "Productos", productsList, sneakersPro });
     } catch (error) {
-      res.render("productsList", { title: "Productos", productsList: [] });
+      res.render("productsList", { title: "Productos", productsList: [], sneakersPro: [] });
       console.log(error);
     }
   },
@@ -144,6 +160,7 @@ const productsControllers = {
       const productsSneakers = await Product.findAll({
         raw: true,
         include: "categoria",
+        include: "brands",
         nest: true,
         where: {
           id_category: 5,
@@ -152,7 +169,7 @@ const productsControllers = {
 
       res.render("sneakers", { title: "Sneakers", productsSneakers });
     } catch {
-      res.render("sneakes", { title: "Sneakers", productsSneakers: [] });
+      res.render("sneakers", { title: "Sneakers", productsSneakers: [] });
     }
   },
 };

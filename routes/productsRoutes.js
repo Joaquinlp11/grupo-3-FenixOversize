@@ -26,5 +26,6 @@ router.get ('/remeras', productsControllers.getRemeras);
 router.get ('/pantalones', productsControllers.getPantalones);
 router.get ('/buzos', productsControllers.getBuzos);
 router.get ('/outfits', productsControllers.getOutfits);
+router.get ('/sneakers', productsControllers.getSneaker);
 
 module.exports = router;

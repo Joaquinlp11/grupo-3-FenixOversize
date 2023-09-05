@@ -81,63 +81,24 @@
       <div class="container-outfits">
         <div class="container-categorias">
           <div class="section-index-sneakers">
-            <div>
-              <div class="card">
-                <a href=""
+            <% sneakers.forEach(sneak => { %>
+              
+              <div>
+                <div class="card">
+                  <a href="/products/<%= sneak.id %>/detail"
                   ><img
-                    class="img-card-index-sneaker"
-                    src="/img/sneakers/sneaker12-sf.png"
-                    alt=""
-                /></a>
-                <div class="description">
-                  <p class="info-card">Sneaker 1</p>
-                  <p class="price-card">$10.600</p>
+                  class="img-card-index-sneaker"
+                  src="<%= sneak.image %>"
+                  alt=""
+                  /></a>
+                  <div class="description">
+                  <p class="info-card"><%= sneak.name %></p>
+                  <p class="price-card">$ <%= sneak.price %></p>
                 </div>
               </div>
             </div>
+            <% }); %>
 
-            <div>
-              <div class="card">
-                <a href=""
-                  ><img
-                    class="img-card-index-sneaker"
-                    src="/img/sneakers/sneaker4-sf.png"
-                    alt=""
-                /></a>
-                <div class="description">
-                  <p class="info-card">Sneaker 2</p>
-                  <p class="price-card">$10.600</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card">
-                <a href=""
-                  ><img
-                    class="img-card-index-sneaker"
-                    src="/img/sneakers/sneaker8.2-sf.png"
-                    alt=""
-                /></a>
-                <div class="description">
-                  <p class="info-card">Sneaker 3</p>
-                  <p class="price-card">$10.600</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="card">
-                <a href=""
-                  ><img
-                    class="img-card-index-sneaker"
-                    src="/img/sneakers/sneaker14-sf.png"
-                    alt=""
-                /></a>
-                <div class="description">
-                  <p class="info-card">Sneaker 4</p>
-                  <p class="price-card">$10.600</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
