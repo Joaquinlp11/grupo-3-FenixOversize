@@ -14,10 +14,11 @@
     position: relative;
     z-index: 2;
 }
+
 .container-category h2,
 .container-category-buzos h2,
 .container-category-outfits h2,
-.container-category-remeras h2 ,
+.container-category-remeras h2,
 .container-category-pantalones h2 {
     font-weight: bold;
     text-align: center;
@@ -27,6 +28,12 @@
     padding: 30px;
     background-position-y: center;
 
+}
+
+.sneaker_h2 {
+    font-size: 1.5rem;
+    margin: 0 auto;
+    margin-top: 90px;
 }
 
 .container-category h2 {
@@ -55,6 +62,7 @@
     background-image: url(/img/fondo6.jpg);
 
 }
+
 .container-category-pantalones h2 {
     background-image: url(/img/fondo11.jpg);
 
@@ -62,7 +70,7 @@
 
 .img-section-categorys img,
 .img-section-buzos img,
-.img-section-outfits img  {
+.img-section-outfits img {
     position: absolute;
     top: 355px;
     width: 71%;
@@ -84,9 +92,10 @@
     filter: opacity(30%);
     right: 260px;
     display: none;
-    
+
 }
-.img-section-pantalones img{
+
+.img-section-pantalones img {
     position: absolute;
     top: 663px;
     width: 80%;
@@ -96,28 +105,32 @@
     display: none;
 }
 
-.container-pants{
-   display: none;
+.container-pants {
+    display: none;
 }
+
 .pants {
     display: grid;
     align-content: stretch;
     justify-items: center;
     display: none;
 }
-.pants img{
+
+.pants img {
     height: 250px;
     border: inset transparent;
     /* border-radius: 10pc; */
 }
-.pants img{
+
+.pants img {
     height: 250px;
     border: inset transparent;
     /* border-radius: 10pc; */
 }
-.pants p{ 
+
+.pants p {
     color: #67361C;
-    
+
     border: inset transparent;
     /* border-radius: 10pc; */
     font-weight: 500;
@@ -188,7 +201,7 @@
 .flip-card-front-outfits,
 .flip-card-back-outfits,
 .flip-card-front-remeras,
-.flip-card-back-remeras ,
+.flip-card-back-remeras,
 .flip-card-front-pantalones,
 .flip-card-back-pantalones {
     position: absolute;
@@ -202,7 +215,7 @@
 .flip-card-front-categorys img,
 .flip-card-front-buzos img,
 .flip-card-front-outfits img,
-.flip-card-front-remeras img ,
+.flip-card-front-remeras img,
 .flip-card-front-pantalones img {
     width: 100%;
     height: 100%;
@@ -233,7 +246,9 @@
     height: 130px;
 }
 
-.flip-card-back-outfits img,.flip-card-back-remeras img, .flip-card-back-pantalones img {
+.flip-card-back-outfits img,
+.flip-card-back-remeras img,
+.flip-card-back-pantalones img {
     max-width: 40%;
     filter: opacity(50%);
     border-radius: 50%;
@@ -247,7 +262,7 @@
 .flip-card-back-outfits h3,
 .flip-card-back-outfits h1,
 .flip-card-back-remeras h3,
-.flip-card-back-remeras h1 ,
+.flip-card-back-remeras h1,
 .flip-card-back-pantalones h3,
 .flip-card-back-pantalones h1,
 .flip-card-back-categorys h3,
@@ -276,7 +291,7 @@
     .img-section-categorys img,
     .img-section-buzos img,
     .img-section-outfits img,
-    .img-section-remeras img ,
+    .img-section-remeras img,
     .img-section-pantalones img {
         position: fixed;
         display: block;
@@ -286,17 +301,31 @@
     .container-category-buzos h2,
     .container-category-outfits h2,
     .container-category-remeras h2,
-    .container-category-pantalones h2{
+    .container-category-pantalones h2 {
         font-weight: bold;
         text-align: center;
         text-transform: uppercase;
-        color: #67361C;
+        color: #c8b9ac;
         height: 100%;
         padding: 30px;
         background-position-y: center;
         font-size: -webkit-xxx-large;
-        text-shadow: -3px -4px 0px #98989d;
+        text-shadow: -3px -4px 0px #67361C;
         border-radius: 10px;
+    }
+
+    .sneaker_h2 {
+        background-image: url("../img/sneakers/section4.jpg");
+        width: 80%;
+        padding: 30px;
+        background-size: cover;
+       
+    }
+
+    .sneaker_h2 h2 {
+        color: #b7a08b;
+        text-shadow: 1px 1px 1px #6c3d23;
+        font-size: -webkit-xxx-large;
     }
 
 }
@@ -316,31 +345,46 @@
     .container-category-buzos h2 {
         background-size: initial;
     }
-    
+
     .container-category-pantalones h2 {
         background-size: cover;
     }
-    
-    
+
+    .sneaker_h2{
+        padding: 5px;
+        background-size: 990px;
+        border: double 4px darkgoldenrod;
+
+    border-radius: 15px;
+    }
+
 }
 
 @media (min-width: 1200px) {
     .container-pants {
-        
+
         display: grid;
         height: 290px;
         position: relative;
         grid-auto-flow: column;
         justify-content: space-between;
     }
-    .pants{
+
+    .pants {
         display: grid;
     }
-   .container-category-pantalones hr{
+
+    .container-category-pantalones hr {
         border-color: #67361C;
         border-width: 2px;
         border-radius: 10pc;
-       
+
+    }
+
+    .sneaker_h2{
+        
+        background-size: max(1277px);
+        width: max(70%);
     }
 
 }
