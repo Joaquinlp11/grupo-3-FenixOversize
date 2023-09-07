@@ -22,8 +22,7 @@ module.exports = (sequelize, dataTypes) => {
     };
     
     const ProductUser = sequelize.define(alias, cols, config);
-    ProductUser.associate = (models)
 
-    return Brand;
+    return ProductUser;
 
 };

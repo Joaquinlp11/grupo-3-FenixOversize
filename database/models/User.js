@@ -37,10 +37,10 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
     const User = sequelize.define(alias, cols, config);
-    Product.associate = models => {
-        Product.belongsToMany(models.Product, {
+    User.associate = models => {
+        User.belongsToMany(models.Product, {
             as:'product',
-            through: 'product_user',
+            through: 'products_users',
             foreignKey: 'id_user',
             otherKey: 'id_product',
             timestamps: false
