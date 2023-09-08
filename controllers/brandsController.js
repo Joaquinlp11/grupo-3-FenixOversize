@@ -7,6 +7,7 @@ const brandsController = {
           const brandList = await Brand.findAll({
             raw: true,
             nest: true,
+            include:'marca'
         });
 
         res.render("brandsList", { title: "Marcas", brandList });

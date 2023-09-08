@@ -1,14 +1,14 @@
 const path = require("path");
 const Sequelize = require('sequelize');
 const { Op } = Sequelize;
-const { Product } = require("../database/models");
+const { Product, Brand} = require("../database/models");
 
 const productsControllers = {
   getListProducts: async (req, res) => {
     try {
       const productsList = await Product.findAll({
         raw: true,
-        include: "brands",
+        include: "marca",
         nest: true,
         where: {
           id_category: {
@@ -18,7 +18,7 @@ const productsControllers = {
       });
       const sneakersPro = await Product.findAll({
         raw: true,
-        include: "brands",
+        include: "marca",
         limit: 8,
         nest: true,
         where:{
@@ -35,7 +35,7 @@ const productsControllers = {
   getDetail: async (req, res) => {
     try {
       const product =  await Product.findByPk(req.params.id, {
-        include: "brands",
+        include: "marca",
       });
       if (product) {
          res.render("detail", { title: "Detalle", product });
@@ -73,7 +73,7 @@ const productsControllers = {
       const productsHoodies = await Product.findAll({
         raw: true,
         include: "categoria",
-        include: "brands",
+        include: "marca",
         nest: true,
         where: {
           id_category: 3,
@@ -90,7 +90,7 @@ const productsControllers = {
       const productsRemeras = await Product.findAll({
         raw: true,
         include: "categoria",
-        include: "brands",
+        include: "marca",
         nest: true,
         where: {
           id_category: 4,
@@ -107,7 +107,7 @@ const productsControllers = {
       const productsPantalones = await Product.findAll({
         raw: true,
         include: "categoria",
-        include: "brands",
+        include: "marca",
         nest: true,
         where: {
           id_category: 2,
@@ -124,7 +124,7 @@ const productsControllers = {
       const productsBuzos = await Product.findAll({
         raw: true,
         include: "categoria",
-        include: "brands",
+        include: "marca",
         nest: true,
         where: {
           id_category: 1,
@@ -142,7 +142,7 @@ const productsControllers = {
       const productsOutfits = await Product.findAll({
         raw: true,
         include: "categoria",
-        include: "brands",
+        include: "marca",
         nest: true,
         
         where: {
@@ -160,7 +160,7 @@ const productsControllers = {
       const productsSneakers = await Product.findAll({
         raw: true,
         include: "categoria",
-        include: "brands",
+        include: "marca",
         nest: true,
         where: {
           id_category: 5,

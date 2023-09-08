@@ -9,11 +9,19 @@ module.exports = (sequelize, dataTypes) => {
         },
         id_product: {
             type: dataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'products',
+                key: 'id'
+            }
         },
         id_user: {
             type: dataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'users',
+                key: 'id'
+            }
         }
     };
     let config = {

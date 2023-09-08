@@ -8,7 +8,7 @@ const mainControllers = {
         raw: true,
         nest: true,
         include:"categoria",
-        include:"brands",
+        include:"marca",
         limit: 4,
         where:{
           id_category: 6,
@@ -18,7 +18,7 @@ const mainControllers = {
         raw: true,
         nest: true,
         include:"categoria",
-        include:"brands",
+        include:"marca",
         limit: 4,
         where:{
           id_category: 5,
