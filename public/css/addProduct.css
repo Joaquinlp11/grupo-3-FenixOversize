@@ -139,13 +139,13 @@ main {
     .product-price input,
     .product-sizes input,
     .product-color input {
-        width: 60%;
+        width: 50%;
     }
     .product-name label,
     .product-price label,
     .product-sizes label,
     .product-color label {
-        left: 25%;
+        left: 27%;
     }
 
     #textarea-descripcion{

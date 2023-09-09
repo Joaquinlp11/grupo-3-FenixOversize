@@ -10,6 +10,8 @@ router.get ('/:id/detail' , productsControllers.getDetail );
 
 router.get ('/addproduct', productsControllers.getAddproduct);
 
+router.post('/keep', productsControllers.create);
+
 router.get ('/car' , productsControllers.getCar);
 
 router.get ('/edit', productsControllers.getEdit);

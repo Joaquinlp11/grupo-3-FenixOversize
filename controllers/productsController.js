@@ -52,6 +52,20 @@ const productsControllers = {
     res.render("addProduct", { title: "Agregar Producto" });
   },
 
+  create: (req, res) => {
+    Product.create({
+      name: req.body.nombre,
+      description: req.body.descripcion,
+      image: req.body.imagen,
+      color: req.body.color,
+      size: req.body.talles,
+      price: req.body.precio 
+    });
+
+    res.redirect('/products');
+
+  },
+
   getEdit: (req, res) => {
     res.render("editProduct", { title: "Editar Producto" });
   },
