@@ -53,7 +53,7 @@ main {
     font-size: 1rem;
     color: #67361C;
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 30%;
+    width: 80%;
     padding: 10px;
 }
 
@@ -63,7 +63,7 @@ main {
 .product-color label {
     opacity: 0.5;
     position: absolute;
-    left: 550px;
+    left: 15%;
     color: #67361C;
     pointer-events: none;
     font-size: 17px;
@@ -87,7 +87,7 @@ main {
 .product-sizes input:focus~label,
 .product-sizes input:valid~label,
 .product-color input:focus~label,
-.product-color input:valid~label{
+.product-color input:valid~label {
     transform: translatex(2%) translateY(-100%) scale(0.8);
     background-color: #CEC2B7;
     padding: 0 0.2em;
@@ -96,35 +96,18 @@ main {
 
 #selecion-imagen {
     color: #67361C;
+    font-size: 19px;
 }
-
-
-/*
-#nombre {
-    padding: 5px 10px;
-}
-
-#precio {
-    padding: 5px 10px;
-}
-
-#talles {
-    padding: 5px 25px;
-}
-
-#color {
-    padding: 5px 25px;
-}
-*/
 
 #title-descripcion {
     display: block;
-    color: #67361C ;
+    color: #67361C;
+    font-size: 19px;
 }
 
 #textarea-descripcion {
     resize: none;
-    width: 500px;
+    width: 230px;
     border: 1.5px solid #67361C;
 }
 
@@ -145,11 +128,28 @@ main {
     border: 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     #button-publicar {
         font-size: medium;
         width: 600px;
         height: 50px;
+    }
+
+    .product-name input,
+    .product-price input,
+    .product-sizes input,
+    .product-color input {
+        width: 60%;
+    }
+    .product-name label,
+    .product-price label,
+    .product-sizes label,
+    .product-color label {
+        left: 25%;
+    }
+
+    #textarea-descripcion{
+        width: 500px;
     }
 }
 
