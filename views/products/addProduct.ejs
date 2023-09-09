@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/addProduct.css">
+<title>Nuevas Zapatillas</title>
+
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <div id="title-add">
+            <h1>¡NUEVO PRODUCTO!</h1>
+        </div>
+        <div id="container-form">
+            <form action="/products/create" method="POST">
+                <div class="product-name">
+                    <input type="text" name="name-producto" id="nombre">
+                    <label for="name-producto">Nombre del producto</label>
+                </div>
+                <br>
+                <div class="product-price">
+                    <input type="number" name="precio" id="precio">
+                    <label for="precio">Precio del producto</label>
+                </div>
+                <br>
+                <div class="product-sizes">
+                    <input type="number" name="talles" id="talles">
+                    <label for="talles">Talles</label> 
+                </div>
+                <br>
+                <div class="product-color">
+                    <input type="text" name="color" id="color">
+                    <label for="color">Colores</label>
+                </div>
+                <br>
+                <div class="container-imagen-producto">
+                    <input type="file" name="imagen" accept=".jpg" multiple>
+                    <label for="imagen" id="selecion-imagen">Seleccione imagenes del producto</label>
+                </div>
+                <br>
+                <div>
+                    <label for="descripcion" id="title-descripcion">Descripción</label>
+                    <textarea name="descripcion" id="textarea-descripcion" cols="10" rows="5"></textarea>
+                </div>
+                <br>
+                <div class="container-publicar-producto">
+                    <button id="button-publicar">Publicar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+
+</html>

@@ -48,16 +48,8 @@ const productsControllers = {
     }
   },
 
-  getSelectCategory: (req, res) => {
-    res.render("selectCategory", { title: "Selecion de Categoria" });
-  },
-
-  getAddSneakers: (req, res) => {
-    res.render("addSneakers", { title: "Agregar Calzado" });
-  },
-
-  getAddClothes: (req, res) => {
-    res.render("addClothes", { title: "Agregar Vestimenta" });
+  getAddproduct: (req, res) => {
+    res.render("addProduct", { title: "Agregar Producto" });
   },
 
   getEdit: (req, res) => {

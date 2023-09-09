@@ -8,15 +8,9 @@ router.get ('/', productsControllers.getListProducts);
 
 router.get ('/:id/detail' , productsControllers.getDetail );
 
-
-router.get ('/addsneakers', productsControllers.getAddSneakers);
-
-router.get ('/selectcategory', productsControllers.getSelectCategory);
-
+router.get ('/addproduct', productsControllers.getAddproduct);
 
 router.get ('/car' , productsControllers.getCar);
-
-router.get ('/addclothes', productsControllers.getAddClothes);
 
 router.get ('/edit', productsControllers.getEdit);
 
