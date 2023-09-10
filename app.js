@@ -4,8 +4,8 @@ const methodOverride = require('method-override');
 const fs = require('fs')
 const publicPath = path.join (__dirname, './public');
 const expressSession = require('express-session');
-const cookieParser = require('cookieParser')
-const expressSession = require('express-session');
+const cookieParser = require('cookie-parser')
+
 
 
 
