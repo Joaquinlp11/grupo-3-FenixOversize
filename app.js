@@ -3,13 +3,17 @@ const path = require('path');
 const methodOverride = require('method-override');
 const fs = require('fs')
 const publicPath = path.join (__dirname, './public');
- const expressSession = require('express-session');
+const expressSession = require('express-session');
+const cookieParser = require('cookieParser')
+const expressSession = require('express-session');
+
 
 
 const mainRoutes = require('./routes/mainRoutes');
 const usersRoutes = require('./routes/usersRoutes');
 const productsRoutes = require('./routes/productsRoutes');
-const brandsRoutes = require('./routes/brandsRoutes')
+const brandsRoutes = require('./routes/brandsRoutes');
+
 
 const app = express();
 app.set('view engine' , 'ejs');
@@ -24,6 +28,11 @@ app.set ('views' , [
 app.use ( express.static ( publicPath));
 app.use ( express.urlencoded({ extended: true }));
 app.use ( express.json());
+app.use (cookieParser());
+app.use (expressSession({secret: 'this is my secret'}));
+
+
+
 
 app.use(expressSession({
     secret: 'este es mi secreto monito123',
@@ -31,9 +40,10 @@ app.use(expressSession({
     saveUninitialized: true
 }));
 
+
 /* Routers */
 app.use(mainRoutes);
-app.use(usersRoutes);
+app.use('/users', usersRoutes);
 app.use('/products',productsRoutes);
 app.use(brandsRoutes);
 

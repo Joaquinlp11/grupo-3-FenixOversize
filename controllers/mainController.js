@@ -3,6 +3,16 @@ const { Product } = require("../database/models");
 
 const mainControllers = {
   getIndex: async (req, res) => {
+
+    let userData = req.session.user;
+
+    if(!userData){
+      userData = {}
+    }
+
+    res.render('home', {title: 'Home', userData});
+
+
     try {
       const outfits = await Product.findAll({
         raw: true,
