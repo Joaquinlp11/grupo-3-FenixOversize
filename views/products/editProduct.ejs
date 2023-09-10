@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('../partials/head') %>
-    <link rel="stylesheet" href="/css/editProduct.css">
-    <title>Edición de producto</title>
-</head>
+<%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/addProduct.css">
+
+
 <body>
     <%- include('../partials/header') %>
     <main>
-        <div id="title-edit">
-            <h1>¡Edite el contenido a gusto!</h1>
+        <div id="title-add">
+            <h1>¡EDITAR PRODUCTO!</h1>
         </div>
-        <div id="form-edit">
-            <form action="/" method="POST">
-                <div class="container-product-name">
-                    <input type="text" name="name-producto" id="nombre">
-                    <label for="name-producto">Nombre del producto</label>
+        <div id="container-form">
+            <form action="/products?_method=put" method="POST">
+                <div class="product-name">
+                    <input type="text" name="nombre" id="nombre" value="<%= productUpdate.name %>">
+                    <label for="nombre">Nombre del producto</label>
                 </div>
-                <div class="container-product-price">
-                    <input type="number" name="precio" id="precio">
+                <br>
+                <div class="product-price">
+                    <input type="number" name="precio" id="precio" value="<%= productUpdate.price %>" >
                     <label for="precio">Precio del producto</label>
                 </div>
-                <div class="container-product-sizes">
-                    <label for="talles">Talles</label>
-                    <select name="talles">
-                        <option value="35">35</option>
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                        <option value="44">44</option>
-                        <option value="45">45</option>
-                    </select>
+                <br>
+                <div class="product-sizes">
+                    <input type="number" name="talles" id="talles" value="<%= productUpdate.size %>">
+                    <label for="talles">Talles</label> 
                 </div>
-                <div class="container-product-color">
+                <br>
+                <div class="product-color">
+                    <input type="text" name="color" id="color" value="<%= productUpdate.color %>">
                     <label for="color">Colores</label>
-                    <select name="color" id="color">
-                        <option value="blanco">Blanco</option>
-                        <option value="negro">Negro</option>
-                        <option value="marron">Marron</option>
-                        <option value="violeta">Violeta</option>
-                        <option value="rosa">Rosa</option>
-                        <option value="crema">Crema</option>
-                    </select>
                 </div>
-                <div id="container-product-image">
-                    <label for="imagen">Seleccione imagenes del producto</label>
-                    <input type="file" name="imagen" accept=".jpg" multiple>
+                <br>
+                <div class="container-imagen-producto">
+                    <input type="file" name="imagen" accept=".jpg" multiple >
+                    <label for="imagen" id="selecion-imagen">Seleccione imagen</label>
                 </div>
-                <div id="container-button-edit">
-                    <button id="button-edit">Publicar</button>
+                <br>
+                <div>
+                    <label for="descripcion" id="title-descripcion">Descripción</label>
+                    <textarea name="descripcion" id="textarea-descripcion" cols="10" rows="5"><%= productUpdate.description %></textarea>
+                </div>
+                <br>
+                <div class="container-publicar-producto">
+                    <input type="submit" value="Enviar" />
                 </div>
             </form>
         </div>
     </main>
     <%- include('../partials/footer') %>
 </body>
+
 </html>

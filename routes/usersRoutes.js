@@ -15,22 +15,11 @@ router.get ( '/login' , usersControllers.getLogin );
 //@POST-   /user/login
 router.post ( '/login' , usersControllers.loginUser );
 
-module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
 
 router.get ( '/login' , usersControllers.getLogin );
 router.get ( '/register' , usersControllers.getRegister );
 router.get ( '/userAcount' , usersControllers.getUserAcount);
 router.get ( '/userList' , usersControllers.getUserList);
+module.exports = router;
 
 

@@ -3,6 +3,7 @@ const Sequelize = require('sequelize');
 const { Op } = Sequelize;
 const { Product, Brand} = require("../database/models");
 
+
 const productsControllers = {
   getListProducts: async (req, res) => {
     try {
@@ -66,9 +67,48 @@ const productsControllers = {
 
   },
 
-  getEdit: (req, res) => {
-    res.render("editProduct", { title: "Editar Producto" });
+  
+  delete: async(req, res)=> {
+    const productDeleted = Product.destroy({
+      where:{
+        id: req.params.id
+      }
+    })
   },
+
+  getUpdate: async(req, res) => {
+    
+try {
+  const productUpdate = await Product.findByPk(req.params.id)
+  
+  
+  res.render("editProduct",{title:"Editar Producto", productUpdate});
+} catch (error) {
+  res.render("editProduct", { productUpdate: [] });
+  
+}
+
+    
+  },
+
+  updateProduct: async(req, res)=>{
+    
+    const newValues = req.body;
+
+        try {
+            await Product.update(newValues, {
+                where: {
+                    id: Number(req.params.id)
+                }
+            });
+
+            res.redirect('/products');
+        } catch (error) {
+            res.send('No se pudo actualizar!')
+            console.log(error);
+        }
+  },
+
   getCar: (req, res) => {
     res.render("carrito", { title: "Carrito" });
   },

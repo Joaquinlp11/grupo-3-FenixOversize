@@ -1,7 +1,8 @@
 const path = require ('path')
 const {User} = require('../database/models')
-const userModel = require('../database/models/User.js')
-const bcript = require('bcript')
+
+const bcrypt = require('bcrypt');
+
 
 
 const usersControllers= {
@@ -17,12 +18,12 @@ const usersControllers= {
 
         const user = {...req.body};
 
-        const newPassword = bcript.hashSync(user.password, 12);
+        const newPassword = bcrypt.hashSync(user.password, 12);
 
         user.password = newPassword;
 
 
-        userModel.createOne(user);
+        User.create(user);
         res.send('se registro')
     },
 
@@ -36,7 +37,7 @@ const usersControllers= {
 
     loginUser: ( req , res )=>{
 
-        const searchedUser = userModel.findByEmail(req.body.email);
+        const searchedUser = User.findByEmail(req.body.email);
 
         if (!searchedUser){
             return res.redirect('/users/login');
@@ -44,7 +45,7 @@ const usersControllers= {
 
         const {password : hashedPw} = searchedUser;
 
-        const isCorrect = bcript.compareSync(req.body.password, hashedPw);
+        const isCorrect = bcrypt.compareSync(req.body.password, hashedPw);
 
             
         if (isCorrect){
@@ -62,19 +63,6 @@ const usersControllers= {
         }
     },
 
-
-
-
-
-
-
-
-
-
-    getLogin: ( req , res )=>{
-
-        res.render ( 'login' , { title : 'ingresa'});
-    },
    
     getUserAcount: ( req , res )=>{
 
