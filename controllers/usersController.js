@@ -9,8 +9,8 @@ const usersControllers= {
 
     getRegister: ( req , res )=>{
 
-        // res.render ( 'register' , { title : 'Registrate'});
-        res.render ('register');
+         res.render ( 'register' , { title : 'Registrate'});
+        
 
     },
 
@@ -31,7 +31,7 @@ const usersControllers= {
 
     getLogin: ( req , res )=>{
 
-        res.render('login');
+        res.render('login',{title: 'Inicia sesion'});
     },
 
 

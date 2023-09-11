@@ -11,25 +11,20 @@
             <h1>¡EDITAR PRODUCTO!</h1>
         </div>
         <div id="container-form">
-            <form action="/products?_method=put" method="POST">
+            <form method="POST" action="/products?_method=PUT" >
+                <input type="hidden" name="id" value="<%= product.id %>">
                 <div class="product-name">
-                    <input type="text" name="nombre" id="nombre" value="<%= productUpdate.name %>">
+
+                    
+                </div>
+                <div class="product-name">
+                    <input type="text" name="nombre" id="nombre" value="<%= product.name %>">
                     <label for="nombre">Nombre del producto</label>
                 </div>
                 <br>
-                <div class="product-price">
-                    <input type="number" name="precio" id="precio" value="<%= productUpdate.price %>" >
-                    <label for="precio">Precio del producto</label>
-                </div>
-                <br>
-                <div class="product-sizes">
-                    <input type="number" name="talles" id="talles" value="<%= productUpdate.size %>">
-                    <label for="talles">Talles</label> 
-                </div>
-                <br>
-                <div class="product-color">
-                    <input type="text" name="color" id="color" value="<%= productUpdate.color %>">
-                    <label for="color">Colores</label>
+                <div>
+                    <label for="descripcion" id="title-descripcion">Descripción</label>
+                    <textarea name="descripcion" id="textarea-descripcion" cols="10" rows="5"><%= product.description %></textarea>
                 </div>
                 <br>
                 <div class="container-imagen-producto">
@@ -37,10 +32,21 @@
                     <label for="imagen" id="selecion-imagen">Seleccione imagen</label>
                 </div>
                 <br>
-                <div>
-                    <label for="descripcion" id="title-descripcion">Descripción</label>
-                    <textarea name="descripcion" id="textarea-descripcion" cols="10" rows="5"><%= productUpdate.description %></textarea>
+                <div class="product-color">
+                    <input type="text" name="color" id="color" value="<%= product.color %>">
+                    <label for="color">Color</label>
                 </div>
+                <br>
+                <div class="product-sizes">
+                    <input type="number" name="talles" id="talles" value="<%= product.size %>">
+                    <label for="talles">Talles</label> 
+                </div>
+                <br>
+                <div class="product-price">
+                    <input type="number" name="precio" id="precio" value="<%= product.price %>" >
+                    <label for="precio">Precio</label>
+                </div>
+              
                 <br>
                 <div class="container-publicar-producto">
                     <input type="submit" value="Enviar" />

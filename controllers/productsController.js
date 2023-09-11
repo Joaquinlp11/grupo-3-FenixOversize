@@ -69,44 +69,54 @@ const productsControllers = {
 
   
   delete: async(req, res)=> {
-    const productDeleted = Product.destroy({
-      where:{
-        id: req.params.id
-      }
-    })
+    
+    try {
+      const productDeleted = Product.destroy({
+        where:{
+          id: req.params.id
+        }
+      })
+
+      res.render("editProduct",{title:"Editar Producto", productDeleted});
+    } catch (error) {
+      console.log(error)
+    }
   },
 
+  
+  updateProduct: async(req, res)=>{
+   
+    
+    const newValues = req.body;
+    console.log(newValues)
+    
+    try {
+      const productId = req.body.id
+      await Product.update(newValues, {
+        where: {
+          id: productId
+        }
+      });
+      
+      res.redirect( `/products/${productId}/detail`);
+    } catch (error) {
+      res.send('No se pudo actualizar!')
+      console.log(error);
+    }
+  },
   getUpdate: async(req, res) => {
     
 try {
-  const productUpdate = await Product.findByPk(req.params.id)
+  const product = await Product.findByPk(req.params.id)
   
   
-  res.render("editProduct",{title:"Editar Producto", productUpdate});
+  res.render("editProduct",{title:"Editar Producto", product});
 } catch (error) {
-  res.render("editProduct", { productUpdate: [] });
+  console.log(error);
   
 }
 
     
-  },
-
-  updateProduct: async(req, res)=>{
-    
-    const newValues = req.body;
-
-        try {
-            await Product.update(newValues, {
-                where: {
-                    id: Number(req.params.id)
-                }
-            });
-
-            res.redirect('/products');
-        } catch (error) {
-            res.send('No se pudo actualizar!')
-            console.log(error);
-        }
   },
 
   getCar: (req, res) => {
@@ -169,8 +179,8 @@ try {
     try {
       const productsBuzos = await Product.findAll({
         raw: true,
-        include: "categoria",
-        include: "marca",
+        include: ["categoria","marca"],
+        
         nest: true,
         where: {
           id_category: 1,

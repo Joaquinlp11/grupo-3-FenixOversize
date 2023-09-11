@@ -27,10 +27,12 @@ router.get ('/addproduct', productsControllers.getAddproduct);
 
 router.post('/keep', productsControllers.create);
 
+router.get ('/:id/editProduct', productsControllers.getUpdate);
+
+
 router.get ('/car' , productsControllers.getCar);
 
-router.get ('/:id/editProduct', productsControllers.getUpdate);
-router.post('/', productsControllers.updateProduct);
+router.put('/', productsControllers.updateProduct);
 
 
 

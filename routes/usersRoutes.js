@@ -9,8 +9,7 @@ router.get ( '/register' , usersControllers.getRegister );
 //@POST-   /user
 router.post ( '/' , usersControllers.registerUser );
 
-//@GET-   /user/login
-router.get ( '/login' , usersControllers.getLogin );
+
 
 //@POST-   /user/login
 router.post ( '/login' , usersControllers.loginUser );

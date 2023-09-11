@@ -7,6 +7,8 @@ const expressSession = require('express-session');
 const cookieParser = require('cookie-parser')
 
 
+/* app.use(express.static("public"));
+app.use(methodOverride('_method')); */
 
 
 const mainRoutes = require('./routes/mainRoutes');
@@ -28,8 +30,9 @@ app.set ('views' , [
 app.use ( express.static ( publicPath));
 app.use ( express.urlencoded({ extended: true }));
 app.use ( express.json());
+app.use(methodOverride('_method'))
 app.use (cookieParser());
-app.use (expressSession({secret: 'this is my secret'}));
+
 
 
 
@@ -47,8 +50,6 @@ app.use('/users', usersRoutes);
 app.use('/products',productsRoutes);
 app.use(brandsRoutes);
 
-app.use(express.static("public"));
-app.use(methodOverride('_method'));
 
 app.listen(3000, () => {
     console.log('servidor funcionando http://localhost:3000/');
