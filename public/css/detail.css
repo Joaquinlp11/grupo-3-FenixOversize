@@ -135,7 +135,16 @@ display: inline;
     display: none;
 
 }
-
+.btn-Crud{
+    background: transparent;
+    background-color: #67361c;
+    border: none;
+    color: aliceblue;
+    padding: 0px 63px;
+    position: relative;
+    top: 30px;
+    margin-bottom: 5px
+}
 @media (min-width: 480px) {
 
     .div-img-producto {
@@ -162,7 +171,7 @@ display: inline;
 .informacion-compra{
     
     position: relative;
-    top: -70px;
+    top: -21px;
     left: 30px;
     display: grid;
     text-align: inherit;

@@ -32,7 +32,7 @@ router.get ('/:id/editProduct', productsControllers.getUpdate);
 
 router.get ('/car' , productsControllers.getCar);
 
-router.put('/', productsControllers.updateProduct);
+router.put('/:id/editProduct', productsControllers.updateProduct);
 
 
 

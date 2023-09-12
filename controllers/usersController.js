@@ -64,9 +64,19 @@ const usersControllers= {
     },
 
    
-    getUserAcount: ( req , res )=>{
+    getUserAcount: async ( req , res )=>{
 
-        res.render ( 'userAcount' , { title : 'Mi perfil'});
+        try {
+            const user = await User.findByPk(req.params.id);
+            if (user) {
+              res.render("userAcount", { title: "Detalle usuario", user });
+            } else {
+              res.status(404).send("Producto no encontrado");
+            }
+          } catch (error) {
+            console.log(error);
+            res.status(500).send("Error interno del servidor");
+          }
     },
     getUserList: async ( req , res )=>{
 

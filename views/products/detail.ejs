@@ -20,48 +20,26 @@
                 <h3 class="precio">$ <%= product.price %></h3>
                 <div class="seccion-talles">
                     <h4 class="palabra-talles">Talla: <%= product.size %></h4>
-                    <!--  <a href="" class="guia-talles">Guia de talles</a> --> 
-                    <!-- <div class="select-talles">
-                        <select name="talle">
-                            <option value="XS">XS</option>
-                            <option value="S">S</option>
-                            <option value="M">M</option>
-                            <option value="L">L</option>
-                            <option value="XL">XL</option>
-                            <option value="XXL">XXL</option>
-                            <option value="XXXL">XXXL</option>
-                        </select>
-                    </div> -->
+                    
                 </div>
                 <div class="seccion-colores">
                     <h4 class="palabra-color">Color: </h4>
                     <div class="select-colores">
                         <select name="color">
                             <option value="000000"><%= product.color %></option>
-                            <!-- <option value="#ff0000">Rojo</option>
-                                <option value="#00ff00">Verde</option>
-                                <option value="#0000ff">Azul</option>
-                                <option value="#770077">Morado</option> -->
+                           
                             </select>
                         </div>
                     </div>
-                    <!--  <div class="unidades">
-                        <h4 class="palabra-unidades">Unidades</h4>
-                        <input type="number">
-                    </div>
-                    <div class="compra-carrito">
-                        <a href="" class="boton-compra">Comprar</a>
-                        <a href="" class="boton-carrito">Agregar al carrito</a>
-                    </div>
-                </div>
-                <div class="descripcion">
-                    <h4 class="palabra-descripcion">Descripción</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit leo quis arcu aliquet scelerisque. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam finibus quam ut ligula fringilla posuere ut luctus elit. Cras vehicula at arcu vel eleifend. Aliquam et nunc a erat finibus feugiat. Etiam a mi pretium, accumsan quam vel, laoreet leo. Morbi hendrerit rutrum turpis feugiat volutpat.            
-                    -->
+                    
                     <br>
-                    <a href="/products/<%= product.id %>/editProduct">
+                    <a href="/products/<%= product.id %>/editProduct" >
 
-                        <buttson >Editar</button>
+                        <button class="btn-Crud">Editar</button>
+                    </a>
+                    <a href="/products/addProduct" >
+
+                        <button class="btn-Crud" >Crear</button>
                     </a>
                 </div>
                 

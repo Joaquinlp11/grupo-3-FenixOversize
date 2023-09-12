@@ -1,38 +1,38 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataType) => {
     const alias = 'Product';
     const cols = {
         id: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             
         },
         name: {
-            type: DataTypes.STRING,
+            type: DataType.STRING,
             notNULL: true
         },
         description: {
-            type: DataTypes.STRING,
+            type: DataType.STRING,
             notNULL: true
         },
         image: {
-            type: DataTypes.STRING,
+            type: DataType.STRING,
             notNULL: true
         },
         color: {
-            type: DataTypes.STRING,
+            type: DataType.STRING,
             notNULL: true
         },
         size: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             notNULL: true
         },
         price: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             notNULL: true
         },
         id_brand: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             notNULL: true,
             references: {
                 model: 'brands',
@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         id_category: {
-            type: DataTypes.INTEGER,
+            type: DataType.INTEGER,
             notNULL: true,
             references: {
                 model: 'categorys',

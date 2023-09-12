@@ -1,8 +1,7 @@
 const path = require("path");
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
 const { Op } = Sequelize;
-const { Product, Brand} = require("../database/models");
-
+const { Product, Brand } = require("../database/models");
 
 const productsControllers = {
   getListProducts: async (req, res) => {
@@ -22,30 +21,38 @@ const productsControllers = {
         include: "marca",
         limit: 8,
         nest: true,
-        where:{
-          id_category: 5
-        }
+        where: {
+          id_category: 5,
+        },
       });
 
-      res.render("productsList", { title: "Productos", productsList, sneakersPro });
+      res.render("productsList", {
+        title: "Productos",
+        productsList,
+        sneakersPro,
+      });
     } catch (error) {
-      res.render("productsList", { title: "Productos", productsList: [], sneakersPro: [] });
+      res.render("productsList", {
+        title: "Productos",
+        productsList: [],
+        sneakersPro: [],
+      });
       console.log(error);
     }
   },
   getDetail: async (req, res) => {
     try {
-      const product =  await Product.findByPk(req.params.id, {
+      const product = await Product.findByPk(req.params.id, {
         include: "marca",
       });
       if (product) {
-         res.render("detail", { title: "Detalle", product });
+        res.render("detail", { title: "Detalle", product });
       } else {
-         res.status(404).send("Producto no encontrado");
+        res.status(404).send("Producto no encontrado");
       }
     } catch (error) {
       console.log(error);
-       res.status(500).send("Error interno del servidor");
+      res.status(500).send("Error interno del servidor");
     }
   },
 
@@ -60,63 +67,54 @@ const productsControllers = {
       image: req.body.imagen,
       color: req.body.color,
       size: req.body.talles,
-      price: req.body.precio 
+      price: req.body.precio,
+      id_brand: req.body.id_brand,
+      id_category: req.body.id_category,
     });
 
-    res.redirect('/products');
-
+    res.redirect("/products");
   },
 
-  
-  delete: async(req, res)=> {
-    
+  delete: async (req, res) => {
     try {
       const productDeleted = Product.destroy({
-        where:{
-          id: req.params.id
-        }
-      })
-
-      res.render("editProduct",{title:"Editar Producto", productDeleted});
-    } catch (error) {
-      console.log(error)
-    }
-  },
-
-  
-  updateProduct: async(req, res)=>{
-   
-    
-    const newValues = req.body;
-    console.log(newValues)
-    
-    try {
-      const productId = req.body.id
-      await Product.update(newValues, {
         where: {
-          id: productId
-        }
+          id: req.params.id,
+        },
       });
-      
-      res.redirect( `/products/${productId}/detail`);
+
+      res.render("editProduct", { title: "Editar Producto", productDeleted });
     } catch (error) {
-      res.send('No se pudo actualizar!')
       console.log(error);
     }
   },
-  getUpdate: async(req, res) => {
-    
-try {
-  const product = await Product.findByPk(req.params.id)
-  
-  
-  res.render("editProduct",{title:"Editar Producto", product});
-} catch (error) {
-  console.log(error);
-  
-}
 
-    
+  updateProduct: async (req, res) => {
+    let newValues = req.body;
+    console.log(newValues);
+
+    const productId = req.params.id;
+    try {
+      await Product.update(newValues, {
+        where: {
+          id: productId,
+        },
+      });
+
+      res.redirect(`/products/${productId}/detail`);
+    } catch (error) {
+      res.send("No se pudo actualizar!");
+      console.log(error);
+    }
+  },
+  getUpdate: async (req, res) => {
+    try {
+      const product = await Product.findByPk(req.params.id);
+
+      res.render("editProduct", { title: "Editar Producto", product });
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   getCar: (req, res) => {
@@ -179,8 +177,8 @@ try {
     try {
       const productsBuzos = await Product.findAll({
         raw: true,
-        include: ["categoria","marca"],
-        
+        include: ["categoria", "marca"],
+
         nest: true,
         where: {
           id_category: 1,
@@ -200,7 +198,7 @@ try {
         include: "categoria",
         include: "marca",
         nest: true,
-        
+
         where: {
           id_category: 6,
         },

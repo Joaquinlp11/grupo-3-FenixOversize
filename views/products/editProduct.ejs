@@ -11,8 +11,8 @@
             <h1>¡EDITAR PRODUCTO!</h1>
         </div>
         <div id="container-form">
-            <form method="POST" action="/products?_method=PUT" >
-                <input type="hidden" name="id" value="<%= product.id %>">
+            <form method="POST" action="/products/<%= product.id %>/editProduct?_method=PUT" enctype="multipart/form-data" >
+                
                 <div class="product-name">
 
                     

@@ -17,7 +17,7 @@ router.post ( '/login' , usersControllers.loginUser );
 
 router.get ( '/login' , usersControllers.getLogin );
 router.get ( '/register' , usersControllers.getRegister );
-router.get ( '/userAcount' , usersControllers.getUserAcount);
+router.get ( '/:id/userAcount' , usersControllers.getUserAcount);
 router.get ( '/userList' , usersControllers.getUserList);
 module.exports = router;
 

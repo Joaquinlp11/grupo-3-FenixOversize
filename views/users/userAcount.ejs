@@ -4,16 +4,17 @@
   <body>
     <%- include('../partials/header') %>
     <main class="main-user-acuont">
+      <% if (user) { %>
       <h2 id="">Mi Cuenta</h2>
 
-      <img class="img-acount" src="/img/homeFenix.png" alt="" />
+      <img class="img-acount" src="<%= user.image %>" alt="" />
       <div class="container-user-acount">
         <div class="info-user">
           <div class="label-container">
             <label class="label-user-acount">Primer Nombre: </label>
           </div>
           <div class="label-container">
-            <label class="label-info-acount">Proyecto </label>
+            <label class="label-info-acount"><%= user.first_name %> </label>
           </div>
         </div>
         <div class="info-user">
@@ -21,7 +22,7 @@
             <label class="label-user-acount">Segundo Nombre: </label>
           </div>
           <div class="label-container">
-            <label class="label-info-acount">Fénix </label>
+            <label class="label-info-acount"><%= user.last_name %> </label>
           </div>
         </div>
 
@@ -30,19 +31,16 @@
                 <label class="label-user-acount" for="">Correo: </label>
             </div>
             <div class="label-container">
-                <label class="label-info-acount">fenix@gmail.com </label>
+                <label class="label-info-acount"><%= user.email %> </label>
             </div>
         </div>
-
         <div class="info-user">
-            <div class="label-container">
-
-                <label class="label-user-acount" for="">Direccion: </label>
-            </div>
-            <div class="label-container">
-
-                <label class="label-info-acount">Fenix </label>
-            </div>
+          <div class="label-container">
+            <label class="label-user-acount">Tipo: </label>
+          </div>
+          <div class="label-container">
+            <label class="label-info-acount"><%= user.tipo %> </label>
+          </div>
         </div>
 
         <div class="info-user">
@@ -52,11 +50,12 @@
             </div>
             <div class="label-container">
 
-                <label class="label-info-acount" id="password-user">Fenix </label>
+                <label class="label-info-acount" id="password-user"><%= user.password %> </label>
             </div>
         </div>
 
       </div>
+      <%  }; %>
     </main>
     <%- include('../partials/footer') %>
   </body>
